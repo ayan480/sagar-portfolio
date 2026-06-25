@@ -1,0 +1,22 @@
+{
+  "name": "Ayan Chakraborty - Mobile Application Engineer",
+  "short_name": "Ayan Portfolio",
+  "description": "Senior Mobile Application Engineer specializing in Android and Flutter development",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#d6b25e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Sagar Chowdhury | NISM Research Analyst | Stock Pathshala</title>
+<meta name="description" content="Learn about Sagar Chowdhury — NISM certified research analyst, stock market educator, and founder of Stock Pathshala (স্টক পাঠশালা).">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tech-background.css">
+<link rel="stylesheet" href="mobile-nav-fix.css">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── About page extras ── */
+.about-hero-banner {
+  background: linear-gradient(135deg, #f0fdf6 0%, #ecfdf5 50%, #f0f9ff 100%);
+  border-bottom: 1px solid rgba(5,150,105,0.12);
+  padding: 80px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.dark .about-hero-banner {
+  background: linear-gradient(135deg, #061811 0%, #060d18 60%, #061018 100%);
+  border-bottom-color: rgba(0,208,132,0.12);
+}
+.about-hero-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(5,150,105,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Timeline */
+.timeline { position: relative; padding-left: 36px; }
+.timeline::before {
+  content: ''; position: absolute; left: 10px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green), rgba(5,150,105,0.1));
+  border-radius: 2px;
+}
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -29px; top: 4px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gradient-green);
+  border: 3px solid var(--bg-card);
+  box-shadow: 0 0 0 3px var(--green-border), 0 0 12px var(--accent-glow);
+}
+.timeline-year {
+  display: inline-block; font-size: 11px; font-weight: 800;
+  color: var(--green); letter-spacing: 1px; text-transform: uppercase;
+  background: var(--green-soft); border: 1px solid var(--green-border);
+  padding: 3px 10px; border-radius: 50px; margin-bottom: 8px;
+}
+.timeline-title { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.timeline-desc  { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+
+/* Certificate card */
+.cert-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--green-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+.cert-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-glow); }
+.cert-header {
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #059669, #047857);
+  display: flex; align-items: center; gap: 14px;
+}
+.cert-body { padding: 22px 24px; }
+.cert-seal {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+.cert-meta { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.cert-meta-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--text-secondary);
+}
+.cert-meta-row i { color: var(--green); width: 16px; flex-shrink: 0; }
+.cert-meta-row strong { color: var(--text-primary); }
+
+/* Expertise tag */
+.skill-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: var(--radius-full);
+  font-size: 12px; font-weight: 700; margin: 4px;
+  background: var(--bg-tertiary); color: var(--text-secondary);
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: all var(--transition-base);
+}
+.dark .skill-tag { border-color: rgba(255,255,255,0.08); }
+.skill-tag:hover { background: var(--green-soft); color: var(--green); border-color: var(--green-border); }
+
+/* Stats strip */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: rgba(0,0,0,0.06);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.dark .stats-strip { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+.stats-strip-item {
+  background: var(--bg-card);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+@media(max-width:768px) {
+  .bio-grid { grid-template-columns: 1fr !important; }
+  .about-hero-banner h1 { font-size: 36px !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- Animated Background -->
+<div class="tech-bg-container" style="background:linear-gradient(160deg,#f0fdf6 0%,#f5f7fa 60%,#fdf4f4 100%)">
+  <div class="gradient-orb" style="background:radial-gradient(circle,rgba(5,150,105,0.1),transparent)"></div>
+  <div class="gradient-orb" style="background:radial-gradient(circle,rgba(220,38,38,0.06),transparent)"></div>
+  <div class="gradient-orb" style="background:radial-gradient(circle,rgba(217,119,6,0.05),transparent)"></div>
+  <div class="floating-particle"></div><div class="floating-particle"></div>
+  <div class="floating-particle"></div><div class="floating-particle"></div>
+  <div class="mesh-overlay"></div>
+  <div class="grid-pattern"></div>
+  <div class="circuit-lines"><div class="circuit-line"></div><div class="circuit-line"></div></div>
+</div>
+
+<!-- ── Navigation (light white, no theme toggle) ── -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(5,150,105,0.15);padding:16px 0;
+  box-shadow:0 1px 12px rgba(0,0,0,0.07)">
+  <div style="max-width:1200px;margin:auto;padding:0 24px;
+    display:flex;justify-content:space-between;align-items:center">
+
+    <!-- Brand -->
+    <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+      <img src="assets/stock-pathshala-logo.png" alt="Stock Pathshala"
+        style="width:42px;height:42px;border-radius:50%;object-fit:cover;
+          border:2px solid rgba(5,150,105,0.4);box-shadow:0 2px 8px rgba(5,150,105,0.2);
+          flex-shrink:0"
+        onerror="this.style.display='none'">
+      <div style="display:flex;align-items:baseline;gap:1px">
+        <span style="font-size:22px;font-weight:900;color:#059669;letter-spacing:-0.5px">Stock</span>
+        <span style="font-size:22px;font-weight:900;color:#dc2626;letter-spacing:-0.5px">Pathshala</span>
+      </div>
+    </a>
+
+    <!-- Links — About is active, clearly visible in green -->
+    <div style="display:flex;gap:28px;align-items:center">
+      <a href="index.html" class="nav-link" style="font-weight:500;font-size:14px">Home</a>
+
+      <a href="about.html" class="nav-link active" style="font-weight:700;font-size:14px">About</a>
+
+      <a href="index.html#classes" class="nav-link" style="font-weight:500;font-size:14px">Classes</a>
+
+      <a href="index.html#youtube" class="nav-link" style="font-weight:500;font-size:14px">YouTube</a>
+
+      <a href="index.html#contact" class="nav-link" style="font-weight:500;font-size:14px">Contact</a>
+
+      <a href="tel:+918436090949"
+        style="display:inline-flex;align-items:center;gap:7px;padding:9px 20px;
+          background:linear-gradient(135deg,#059669,#047857);color:#fff;
+          border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;
+          box-shadow:0 3px 12px rgba(5,150,105,0.3);transition:all 0.3s"
+        onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 5px 18px rgba(5,150,105,0.4)'"
+        onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(5,150,105,0.3)'">
+        <i class="fas fa-phone"></i> 8436090949
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero Banner ── -->
+<div class="about-hero-banner" style="margin-top:69px">
+  <div style="position:relative;z-index:1">
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 18px;
+      background:rgba(5,150,105,0.1);border:1.5px solid rgba(5,150,105,0.25);
+      border-radius:50px;color:#059669;font-size:13px;font-weight:700;margin-bottom:20px">
+      <i class="fas fa-certificate"></i> NISM Certified Research Analyst · SEBI
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;
+      flex-wrap:wrap;margin-bottom:16px">
+      <img src="assets/stock-pathshala-logo.png" alt="Stock Pathshala"
+        style="width:80px;height:80px;border-radius:50%;object-fit:cover;
+          border:3px solid rgba(5,150,105,0.4);box-shadow:0 4px 16px rgba(5,150,105,0.2)"
+        onerror="this.style.display='none'">
+      <img src="assets/sagar-profile.jpg" alt="Sagar Chowdhury"
+        style="width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:top;
+          border:3px solid #059669;box-shadow:0 4px 20px rgba(5,150,105,0.25)">
+    </div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:46px;font-weight:800;
+      color:#0d1b2e;line-height:1.15;margin-bottom:12px">
+      Stock <span style="color:#059669">Pathshala</span> &amp; <span style="color:#059669">Sagar Chowdhury</span>
+    </h1>
+    <p style="font-size:17px;color:#3a5068;max-width:640px;margin:0 auto 28px;line-height:1.8">
+      About our institute, our story, and the NISM Certified Research Analyst behind it all.
+    </p>
+    <!-- Quick stat strip -->
+    <div style="display:inline-flex;gap:32px;flex-wrap:wrap;justify-content:center;
+      padding:20px 36px;background:rgba(255,255,255,0.8);border-radius:var(--radius-xl);
+      border:1px solid rgba(5,150,105,0.12);box-shadow:var(--shadow-sm)">
+      <div style="text-align:center">
+        <div style="font-size:28px;font-weight:800;color:#059669">500+</div>
+        <div style="font-size:12px;color:#3a5068;font-weight:600">Students Trained</div>
+      </div>
+      <div style="width:1px;background:rgba(0,0,0,0.08)"></div>
+      <div style="text-align:center">
+        <div style="font-size:28px;font-weight:800;color:#059669">5+</div>
+        <div style="font-size:12px;color:#3a5068;font-weight:600">Years in Markets</div>
+      </div>
+      <div style="width:1px;background:rgba(0,0,0,0.08)"></div>
+      <div style="text-align:center">
+        <div style="font-size:28px;font-weight:800;color:#dc2626">
+          <i class="fab fa-youtube" style="font-size:22px"></i>
+        </div>
+        <div style="font-size:12px;color:#3a5068;font-weight:600">YouTube Educator</div>
+      </div>
+      <div style="width:1px;background:rgba(0,0,0,0.08)"></div>
+      <div style="text-align:center">
+        <div style="font-size:18px;font-weight:800;color:#059669">NISM</div>
+        <div style="font-size:12px;color:#3a5068;font-weight:600">Certified Analyst</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:60px">
+
+<!-- ══════════════ ABOUT STOCK PATHSHALA ══════════════ -->
+<section id="about-sp">
+  <h2><i class="fas fa-university" style="color:var(--green)"></i> About Stock Pathshala</h2>
+
+  <!-- Banner with logo -->
+  <div style="background:linear-gradient(135deg,#059669,#047857);border-radius:var(--radius-xl);
+    padding:40px;margin-bottom:32px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center">
+    <div style="text-align:center;flex-shrink:0">
+      <img src="assets/stock-pathshala-logo.png" alt="Stock Pathshala Logo"
+        style="width:130px;height:130px;border-radius:50%;object-fit:cover;
+          border:3px solid rgba(255,255,255,0.6);box-shadow:0 4px 24px rgba(0,0,0,0.2)"
+        onerror="this.style.display='none'">
+      <div style="margin-top:10px;font-size:13px;color:rgba(255,255,255,0.75)">স্টক পাঠশালা</div>
+    </div>
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:7px;padding:5px 14px;
+        background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);
+        border-radius:50px;color:#fff;font-size:11px;font-weight:700;margin-bottom:14px;letter-spacing:0.5px">
+        <i class="fas fa-certificate"></i> NISM CERTIFIED · SEBI COMPLIANT
+      </div>
+      <h3 style="font-size:26px;font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2">
+        Stock Pathshala — স্টক পাঠশালা
+      </h3>
+      <p style="font-size:15px;color:rgba(255,255,255,0.88);line-height:1.85;margin-bottom:16px">
+        Stock Pathshala is a SEBI-compliant stock market education institute founded by
+        <strong style="color:#fde68a">Sagar Chowdhury</strong>, a NISM Certified Research Analyst.
+        Our mission is to make quality, practical financial education accessible to every Indian —
+        especially Bengali-speaking retail investors who deserve the same knowledge as institutional traders.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="index.html#classes" style="display:inline-flex;align-items:center;gap:7px;
+          padding:10px 22px;background:#fff;color:#059669;border-radius:50px;
+          font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,0.15)">
+          <i class="fas fa-chalkboard-teacher"></i> View Classes
+        </a>
+        <a href="https://wa.me/918436090949" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:10px 22px;
+            background:rgba(255,255,255,0.15);color:#fff;border-radius:50px;
+            font-weight:700;font-size:13px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4)">
+          <i class="fab fa-whatsapp"></i> Enroll Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story + what we do -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px">
+    <div class="card" style="opacity:1;transform:none">
+      <div style="width:48px;height:48px;background:var(--green-soft);border:2px solid var(--green-border);
+        border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;
+        font-size:22px;margin-bottom:16px">🏫</div>
+      <h3 style="font-size:18px;margin-bottom:12px">Our Story</h3>
+      <p style="font-size:14px;line-height:1.85;margin-bottom:12px">
+        Stock Pathshala was born from a simple observation — millions of retail investors in India
+        lose money not because markets are unfair, but because they lack proper education.
+        Sagar Chowdhury set out to change that.
+      </p>
+      <p style="font-size:14px;line-height:1.85">
+        Starting with YouTube videos in Bengali, and growing into a full institute offering live classes,
+        mentoring, and NISM coaching — Stock Pathshala today serves hundreds of students
+        across West Bengal and beyond.
+      </p>
+    </div>
+    <div class="card" style="opacity:1;transform:none">
+      <div style="width:48px;height:48px;background:rgba(217,119,6,0.1);border:2px solid rgba(217,119,6,0.2);
+        border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;
+        font-size:22px;margin-bottom:16px">🎯</div>
+      <h3 style="font-size:18px;margin-bottom:12px">Our Mission</h3>
+      <p style="font-size:14px;line-height:1.85;margin-bottom:12px">
+        To empower every retail investor with the knowledge, discipline, and tools needed
+        to navigate Indian financial markets confidently — and profitably.
+      </p>
+      <p style="font-size:15px;font-style:italic;color:var(--gold);font-weight:700;
+        padding:12px 16px;background:var(--gold-soft);border-radius:var(--radius-md);
+        border-left:3px solid var(--gold)">
+        "An informed investor is a profitable investor."
+      </p>
+    </div>
+  </div>
+
+  <!-- What we offer -->
+  <div style="background:var(--bg-card);border:1px solid rgba(0,0,0,0.07);
+    border-radius:var(--radius-xl);padding:32px;box-shadow:var(--shadow-sm);margin-bottom:32px">
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:22px">
+      <i class="fas fa-list-check" style="color:var(--green)"></i> &nbsp;What We Offer
+    </h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:var(--green-soft);border-radius:var(--radius-md);border-left:3px solid var(--green)">
+        <i class="fas fa-chart-line" style="color:var(--green);flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">Equity &amp; Intraday Trading</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(220,38,38,0.07);border-radius:var(--radius-md);border-left:3px solid var(--red)">
+        <i class="fas fa-fire" style="color:var(--red);flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">Futures &amp; Options (F&amp;O)</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(59,130,246,0.07);border-radius:var(--radius-md);border-left:3px solid #3b82f6">
+        <i class="fas fa-seedling" style="color:#3b82f6;flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">Long-Term Investing</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:var(--gold-soft);border-radius:var(--radius-md);border-left:3px solid var(--gold)">
+        <i class="fas fa-graduation-cap" style="color:var(--gold);flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">NISM Certification Coaching</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(139,92,246,0.07);border-radius:var(--radius-md);border-left:3px solid #8b5cf6">
+        <i class="fas fa-user-tie" style="color:#8b5cf6;flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">1-on-1 Mentoring</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(6,182,212,0.07);border-radius:var(--radius-md);border-left:3px solid #06b6d4">
+        <i class="fas fa-broadcast-tower" style="color:#06b6d4;flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">Free Webinars &amp; Workshops</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(37,211,102,0.07);border-radius:var(--radius-md);border-left:3px solid #25d366">
+        <i class="fab fa-youtube" style="color:#ff4444;flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">YouTube Education Channel</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:var(--green-soft);border-radius:var(--radius-md);border-left:3px solid var(--green)">
+        <i class="fab fa-whatsapp" style="color:#25d366;flex-shrink:0"></i>
+        <span style="font-size:14px;color:var(--text-secondary)">WhatsApp Study Groups</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats strip -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;
+    background:rgba(0,0,0,0.06);border-radius:var(--radius-lg);overflow:hidden;
+    border:1px solid rgba(0,0,0,0.06);margin-bottom:8px">
+    <div style="background:var(--bg-card);padding:24px;text-align:center">
+      <div style="font-size:36px;font-weight:800;color:var(--green);margin-bottom:4px">500+</div>
+      <div style="font-size:13px;color:var(--text-muted);font-weight:600">Students Trained</div>
+    </div>
+    <div style="background:var(--bg-card);padding:24px;text-align:center">
+      <div style="font-size:36px;font-weight:800;color:var(--red);margin-bottom:4px">3</div>
+      <div style="font-size:13px;color:var(--text-muted);font-weight:600">NISM Certificates</div>
+    </div>
+    <div style="background:var(--bg-card);padding:24px;text-align:center">
+      <div style="font-size:36px;font-weight:800;color:var(--gold);margin-bottom:4px">6+</div>
+      <div style="font-size:13px;color:var(--text-muted);font-weight:600">Course Modules</div>
+    </div>
+    <div style="background:var(--bg-card);padding:24px;text-align:center">
+      <div style="font-size:36px;font-weight:800;color:#ff4444;margin-bottom:4px">
+        <i class="fab fa-youtube" style="font-size:28px"></i>
+      </div>
+      <div style="font-size:13px;color:var(--text-muted);font-weight:600">YouTube Educator</div>
+    </div>
+    <div style="background:var(--bg-card);padding:24px;text-align:center">
+      <div style="font-size:36px;font-weight:800;color:var(--green);margin-bottom:4px">5+</div>
+      <div style="font-size:13px;color:var(--text-muted);font-weight:600">Years in Markets</div>
+    </div>
+  </div>
+</section>
+
+<!-- divider -->
+<div style="height:2px;background:linear-gradient(to right,transparent,var(--green-border),transparent);
+  margin-bottom:80px;border-radius:2px"></div>
+
+<!-- ══════════════ BIO ══════════════ -->
+<section>
+  <h2><i class="fas fa-user-circle" style="color:var(--green)"></i> Who is Sagar Chowdhury?</h2>
+  <div class="card bio-grid" style="opacity:1;transform:none;
+    display:grid;grid-template-columns:auto 1.1fr 0.9fr;gap:40px;align-items:start">
+
+    <!-- Profile Photo -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+      <div style="position:relative">
+        <img src="assets/sagar-profile.jpg" alt="Sagar Chowdhury"
+          style="width:180px;height:220px;object-fit:cover;object-position:top center;
+            border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.15);
+            border:3px solid rgba(5,150,105,0.3)">
+        <div style="position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);
+          white-space:nowrap;background:linear-gradient(135deg,#059669,#047857);
+          color:#fff;font-size:11px;font-weight:800;padding:5px 14px;
+          border-radius:50px;box-shadow:0 2px 8px rgba(5,150,105,0.4);letter-spacing:0.5px">
+          <i class="fas fa-certificate"></i> NISM Certified
+        </div>
+      </div>
+      <div style="margin-top:8px;text-align:center">
+        <div style="font-size:16px;font-weight:800;color:var(--text-primary)">Sagar Chowdhury</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px">Research Analyst</div>
+        <div style="font-size:12px;color:var(--text-muted)">West Bengal, India</div>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-size:16px;line-height:1.9;margin-bottom:16px">
+        <strong style="color:var(--text-primary)">Sagar Chowdhury</strong> is a
+        <strong style="color:var(--green)">NISM Certified Research Analyst</strong> (Series XV)
+        based in West Bengal, India. With a deep passion for financial markets and a mission to
+        make stock market education accessible to every Indian, he founded
+        <strong style="color:var(--green)">Stock Pathshala (স্টক পাঠশালা)</strong>.
+      </p>
+      <p style="font-size:15px;line-height:1.9;margin-bottom:16px;color:var(--text-secondary)">
+        Having navigated Indian equities through multiple bull and bear market cycles, Sagar brings
+        real-world experience to every session. He teaches practical strategies grounded in
+        live market conditions — not just textbook theory.
+      </p>
+      <p style="font-size:15px;line-height:1.9;margin-bottom:16px;color:var(--text-secondary)">
+        His YouTube channel <strong style="color:#ff0000">@sagarchowdhury-1991</strong> delivers
+        daily market analysis, stock picks, educational series, and F&amp;O strategies
+        primarily in Bengali and Hindi — making quality research accessible to regional investors.
+      </p>
+      <p style="font-size:15px;line-height:1.9;color:var(--text-secondary)">
+        Beyond teaching, Sagar actively conducts equity research, publishes market outlooks, and
+        mentors aspiring analysts — many of whom have gone on to clear their own NISM certifications
+        and build careers in financial markets.
+      </p>
+
+      <!-- Social links -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+        <a href="https://www.linkedin.com/in/sagar-chowdhury-507744264/" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;
+            background:rgba(10,102,194,0.08);border:1.5px solid rgba(10,102,194,0.25);
+            border-radius:50px;color:#0a66c2;font-size:13px;font-weight:700;text-decoration:none;
+            transition:all 0.2s"
+          onmouseover="this.style.background='#0a66c2';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(10,102,194,0.08)';this.style.color='#0a66c2'">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.youtube.com/@sagarchowdhury-1991" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;
+            background:rgba(255,0,0,0.07);border:1.5px solid rgba(255,0,0,0.25);
+            border-radius:50px;color:#ff0000;font-size:13px;font-weight:700;text-decoration:none;
+            transition:all 0.2s"
+          onmouseover="this.style.background='#ff0000';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(255,0,0,0.07)';this.style.color='#ff0000'">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.facebook.com/sagar.chowdhury.794/" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;
+            background:rgba(24,119,242,0.07);border:1.5px solid rgba(24,119,242,0.25);
+            border-radius:50px;color:#1877f2;font-size:13px;font-weight:700;text-decoration:none;
+            transition:all 0.2s"
+          onmouseover="this.style.background='#1877f2';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(24,119,242,0.07)';this.style.color='#1877f2'">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/sagar_chowdhury_official/" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:9px 18px;
+            background:rgba(225,48,108,0.07);border:1.5px solid rgba(225,48,108,0.25);
+            border-radius:50px;color:#e1306c;font-size:13px;font-weight:700;text-decoration:none;
+            transition:all 0.2s"
+          onmouseover="this.style.background='#e1306c';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(225,48,108,0.07)';this.style.color='#e1306c'">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: skills -->
+    <div>
+      <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);
+        text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px">
+        <i class="fas fa-bullseye" style="color:var(--green)"></i> &nbsp;Areas of Expertise
+      </h3>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px">
+        <span class="skill-tag"><i class="fas fa-chart-line" style="color:var(--green)"></i> Equity Research</span>
+        <span class="skill-tag"><i class="fas fa-chart-bar" style="color:var(--green)"></i> Technical Analysis</span>
+        <span class="skill-tag"><i class="fas fa-search-dollar" style="color:#3b82f6"></i> Fundamental Analysis</span>
+        <span class="skill-tag"><i class="fas fa-fire" style="color:var(--red)"></i> Futures &amp; Options</span>
+        <span class="skill-tag"><i class="fas fa-brain" style="color:#8b5cf6"></i> Market Psychology</span>
+        <span class="skill-tag"><i class="fas fa-shield-halved" style="color:var(--gold)"></i> Risk Management</span>
+        <span class="skill-tag"><i class="fas fa-graduation-cap" style="color:var(--gold)"></i> NISM Coaching</span>
+        <span class="skill-tag"><i class="fas fa-seedling" style="color:#059669"></i> Portfolio Building</span>
+        <span class="skill-tag"><i class="fas fa-bolt" style="color:var(--red)"></i> Intraday Trading</span>
+        <span class="skill-tag"><i class="fas fa-clock" style="color:#06b6d4"></i> Swing Trading</span>
+      </div>
+
+      <h3 style="font-size:16px;font-weight:800;color:var(--text-primary);
+        text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px">
+        <i class="fas fa-map-marker-alt" style="color:var(--red)"></i> &nbsp;Contact Info
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a href="tel:+918436090949"
+          style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--green-soft);
+            border:1px solid var(--green-border);display:flex;align-items:center;
+            justify-content:center;font-size:15px;color:var(--green);flex-shrink:0">
+            <i class="fas fa-phone"></i></div>
+          <span style="font-size:15px;font-weight:700;color:var(--green)">+91 84360 90949</span>
+        </a>
+        <a href="https://wa.me/918436090949" target="_blank"
+          style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+          <div style="width:36px;height:36px;border-radius:8px;
+            background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);
+            display:flex;align-items:center;justify-content:center;font-size:15px;
+            color:#25d366;flex-shrink:0">
+            <i class="fab fa-whatsapp"></i></div>
+          <span style="font-size:14px;color:var(--text-secondary)">WhatsApp for enquiries</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--red-soft);
+            border:1px solid rgba(220,38,38,0.2);display:flex;align-items:center;
+            justify-content:center;font-size:15px;color:var(--red);flex-shrink:0">
+            <i class="fas fa-map-marker-alt"></i></div>
+          <span style="font-size:14px;color:var(--text-secondary)">West Bengal, India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CERTIFICATIONS ══════════════ -->
+<section>
+  <h2><i class="fas fa-award" style="color:var(--gold)"></i> Certifications &amp; Credentials</h2>
+  <p style="color:var(--text-secondary);font-size:15px;margin-bottom:36px;margin-top:-28px">
+    Verified NISM certifications issued by the National Institute of Securities Markets (SEBI).
+    Registration No: <strong style="color:var(--green)">NISM-202200087269</strong>
+  </p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px">
+
+    <!-- CERT 1: NISM Series XV — Research Analyst -->
+    <div style="background:var(--bg-card);border-radius:20px;overflow:hidden;
+      box-shadow:var(--shadow-md);border:1.5px solid var(--green-border);
+      transition:all 0.3s"
+      onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 48px rgba(5,150,105,0.2)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-md)'">
+      <!-- Header band -->
+      <div style="background:linear-gradient(135deg,#059669,#047857);
+        padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.75);
+            letter-spacing:1px;text-transform:uppercase">NISM Series XV</div>
+          <div style="font-size:16px;font-weight:800;color:#fff">Research Analyst</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+          <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;
+            font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:0.5px">PASS</span>
+          <span style="color:rgba(255,255,255,0.8);font-size:11px">Valid till Apr 2028</span>
+        </div>
+      </div>
+      <!-- Certificate image -->
+      <a href="assets/cert-nism-xv.jpg" target="_blank" title="View full certificate">
+        <img src="assets/cert-nism-xv.jpg" alt="NISM Series XV Research Analyst Certificate - Sagar Chowdhury"
+          style="width:100%;display:block;cursor:zoom-in;
+            transition:transform 0.4s ease"
+          onmouseover="this.style.transform='scale(1.02)'"
+          onmouseout="this.style.transform='scale(1)'">
+      </a>
+      <!-- Details strip -->
+      <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;
+        border-top:1px solid rgba(0,0,0,0.06)">
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Date</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text-primary)">Apr 08, 2025</div>
+        </div>
+        <div style="text-align:center;border-left:1px solid rgba(0,0,0,0.06);
+          border-right:1px solid rgba(0,0,0,0.06)">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Marks</div>
+          <div style="font-size:13px;font-weight:700;color:var(--green)">64.75 / 100</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Centre</div>
+          <div style="font-size:11px;font-weight:600;color:var(--text-primary)">Berhampore, WB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERT 2: NISM Series VIII — Equity Derivatives -->
+    <div style="background:var(--bg-card);border-radius:20px;overflow:hidden;
+      box-shadow:var(--shadow-md);border:1.5px solid rgba(220,38,38,0.2);
+      transition:all 0.3s"
+      onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 48px rgba(220,38,38,0.15)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-md)'">
+      <div style="background:linear-gradient(135deg,#dc2626,#b91c1c);
+        padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.75);
+            letter-spacing:1px;text-transform:uppercase">NISM Series VIII</div>
+          <div style="font-size:16px;font-weight:800;color:#fff">Equity Derivatives</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+          <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;
+            font-weight:800;padding:3px 10px;border-radius:20px">PASS</span>
+          <span style="color:rgba(255,255,255,0.8);font-size:11px">Valid till Mar 2027</span>
+        </div>
+      </div>
+      <a href="assets/cert-nism-viii.jpg" target="_blank" title="View full certificate">
+        <img src="assets/cert-nism-viii.jpg" alt="NISM Series VIII Equity Derivatives Certificate - Sagar Chowdhury"
+          style="width:100%;display:block;cursor:zoom-in;transition:transform 0.4s ease"
+          onmouseover="this.style.transform='scale(1.02)'"
+          onmouseout="this.style.transform='scale(1)'">
+      </a>
+      <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;
+        border-top:1px solid rgba(0,0,0,0.06)">
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Date</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text-primary)">Mar 07, 2024</div>
+        </div>
+        <div style="text-align:center;border-left:1px solid rgba(0,0,0,0.06);
+          border-right:1px solid rgba(0,0,0,0.06)">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Marks</div>
+          <div style="font-size:13px;font-weight:700;color:#dc2626">67.25 / 100</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Centre</div>
+          <div style="font-size:11px;font-weight:600;color:var(--text-primary)">Berhampore, WB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERT 3: NISM Series V-A — Mutual Fund Distributors -->
+    <div style="background:var(--bg-card);border-radius:20px;overflow:hidden;
+      box-shadow:var(--shadow-md);border:1.5px solid rgba(217,119,6,0.25);
+      transition:all 0.3s"
+      onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 48px rgba(217,119,6,0.15)'"
+      onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-md)'">
+      <div style="background:linear-gradient(135deg,#d97706,#b45309);
+        padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.75);
+            letter-spacing:1px;text-transform:uppercase">NISM Series V-A</div>
+          <div style="font-size:16px;font-weight:800;color:#fff">Mutual Fund Distributors</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+          <span style="background:rgba(255,255,255,0.2);color:#fff;font-size:11px;
+            font-weight:800;padding:3px 10px;border-radius:20px">PASS</span>
+          <span style="color:rgba(255,255,255,0.8);font-size:11px">Valid till Sep 2026</span>
+        </div>
+      </div>
+      <a href="assets/cert-nism-va.jpg" target="_blank" title="View full certificate">
+        <img src="assets/cert-nism-va.jpg" alt="NISM Series V-A Mutual Fund Distributors Certificate - Sagar Chowdhury"
+          style="width:100%;display:block;cursor:zoom-in;transition:transform 0.4s ease"
+          onmouseover="this.style.transform='scale(1.02)'"
+          onmouseout="this.style.transform='scale(1)'">
+      </a>
+      <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;
+        border-top:1px solid rgba(0,0,0,0.06)">
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Date</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text-primary)">Sep 26, 2023</div>
+        </div>
+        <div style="text-align:center;border-left:1px solid rgba(0,0,0,0.06);
+          border-right:1px solid rgba(0,0,0,0.06)">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Marks</div>
+          <div style="font-size:13px;font-weight:700;color:#d97706">72 / 100</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:10px;font-weight:700;color:var(--text-muted);
+            text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Centre</div>
+          <div style="font-size:11px;font-weight:600;color:var(--text-primary)">Berhampore, WB</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Verify note -->
+  <div style="margin-top:24px;padding:16px 22px;background:var(--bg-card);
+    border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,0.07);
+    display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-sm)">
+    <div style="width:42px;height:42px;background:var(--green-soft);border-radius:50%;
+      display:flex;align-items:center;justify-content:center;font-size:18px;
+      color:var(--green);flex-shrink:0">
+      <i class="fas fa-shield-halved"></i>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin:0">
+      <strong style="color:var(--text-primary)">Verify online:</strong>
+      All NISM certificates can be verified at
+      <a href="https://certify.nism.ac.in" target="_blank"
+        style="color:var(--green);font-weight:700">certify.nism.ac.in</a>
+      using Registration No. <strong style="color:var(--green)">NISM-202200087269</strong>
+      &nbsp;|&nbsp; Click any certificate image above to view full size.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ JOURNEY TIMELINE ══════════════ -->
+<section>
+  <h2><i class="fas fa-road" style="color:var(--green)"></i> The Stock Pathshala Journey</h2>
+  <div class="card" style="opacity:1;transform:none;padding:40px 40px 32px 56px">
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Early Career</div>
+        <div class="timeline-title">Entered Financial Markets</div>
+        <div class="timeline-desc">Started studying the stock market out of personal interest and investment.
+          Developed a disciplined approach to equity research and trading through years of hands-on market experience.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">NISM Certification</div>
+        <div class="timeline-title">Cleared NISM Series XV — Research Analyst</div>
+        <div class="timeline-desc">Cleared the SEBI-mandated NISM Research Analyst certification —
+          qualifying as a registered research analyst permitted to publish formal equity research in India.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">YouTube Channel</div>
+        <div class="timeline-title">Launched @sagarchowdhury-1991</div>
+        <div class="timeline-desc">Started a YouTube channel to share daily market insights and stock education
+          with Bengali-speaking retail investors — making complex financial concepts approachable and practical.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Stock Pathshala Founded</div>
+        <div class="timeline-title">Established স্টক পাঠশালা</div>
+        <div class="timeline-desc">Founded Stock Pathshala as a structured educational institute offering
+          live classes, NISM coaching, F&amp;O workshops, long-term investing programs,
+          and mentoring to help retail investors make confident, informed decisions.</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:linear-gradient(135deg,#d97706,#b45309)"></div>
+        <div class="timeline-year" style="color:var(--gold);background:var(--gold-soft);border-color:rgba(217,119,6,0.25)">
+          Present · 2026
+        </div>
+        <div class="timeline-title">Growing Community of Traders &amp; Investors</div>
+        <div class="timeline-desc">Continuing to educate, mentor, and inspire 500+ students across West Bengal and India.
+          Active on YouTube, Facebook, Instagram, and WhatsApp with a growing community
+          of passionate, disciplined market participants.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ QUOTE ══════════════ -->
+<section style="margin-bottom:80px">
+  <div style="text-align:center;padding:48px 40px;
+    background:linear-gradient(135deg,rgba(5,150,105,0.06),rgba(5,150,105,0.02));
+    border-radius:var(--radius-xl);border:1.5px solid var(--green-border);position:relative;overflow:hidden">
+    <div style="position:absolute;top:-20px;left:30px;font-size:160px;
+      color:rgba(5,150,105,0.08);font-family:Georgia,serif;line-height:1;pointer-events:none">❝</div>
+    <i class="fas fa-quote-left" style="font-size:28px;color:var(--green);opacity:0.5;margin-bottom:16px;display:block"></i>
+    <p style="font-size:22px;font-style:italic;color:var(--text-primary);
+      max-width:780px;margin:0 auto;line-height:1.7;position:relative;z-index:1;font-family:'Playfair Display',serif">
+      The stock market is a device for transferring money from the impatient to the patient.
+      My job is to teach you patience, discipline, and strategy.
+    </p>
+    <div style="margin-top:20px;display:flex;align-items:center;justify-content:center;gap:10px">
+      <div style="width:40px;height:2px;background:var(--gradient-green);border-radius:2px"></div>
+      <span style="font-weight:800;color:var(--green);font-size:14px">Sagar Chowdhury</span>
+      <div style="width:40px;height:2px;background:var(--gradient-green);border-radius:2px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<section style="text-align:center;margin-bottom:80px">
+  <h2 style="margin-bottom:12px">Ready to Start Your Market Journey?</h2>
+  <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto">
+    Join Stock Pathshala today. Learn from a NISM certified analyst who has been
+    in the trenches of Indian markets.
+  </p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <a href="index.html#classes" class="btn primary" style="padding:14px 36px;font-size:15px">
+      <i class="fas fa-chalkboard-teacher"></i> View All Classes
+    </a>
+    <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20join%20Stock%20Pathshala"
+      target="_blank"
+      style="display:inline-flex;align-items:center;gap:8px;padding:14px 36px;font-size:15px;
+        background:rgba(37,211,102,0.1);border:1.5px solid rgba(37,211,102,0.3);
+        border-radius:50px;color:#25d366;font-weight:700;text-decoration:none;transition:all 0.3s"
+      onmouseover="this.style.background='#25d366';this.style.color='#fff'"
+      onmouseout="this.style.background='rgba(37,211,102,0.1)';this.style.color='#25d366'">
+      <i class="fab fa-whatsapp"></i> WhatsApp Sagar
+    </a>
+    <a href="index.html" class="btn" style="padding:14px 36px;font-size:15px">
+      <i class="fas fa-home"></i> Back to Home
+    </a>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <!-- Green CTA band -->
+  <div style="background:linear-gradient(135deg,#059669,#047857);padding:36px 24px">
+    <div style="max-width:1200px;margin:auto;
+      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#fff;margin-bottom:6px">
+          <span>Stock</span><span style="color:#fde68a">Pathshala</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.85);font-size:14px">
+          NISM Certified · West Bengal, India · +91 84360 90949
+        </p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://wa.me/918436090949" target="_blank"
+          style="display:inline-flex;align-items:center;gap:7px;padding:11px 22px;
+            background:#fff;color:#059669;border-radius:50px;font-weight:800;font-size:13px;text-decoration:none">
+          <i class="fab fa-whatsapp" style="color:#25d366"></i> Enroll Now
+        </a>
+        <a href="tel:+918436090949"
+          style="display:inline-flex;align-items:center;gap:7px;padding:11px 22px;
+            background:rgba(255,255,255,0.15);color:#fff;border-radius:50px;
+            font-weight:700;font-size:13px;text-decoration:none;
+            border:1.5px solid rgba(255,255,255,0.4)">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social + bottom bar -->
+  <div style="background:var(--bg-secondary);padding:28px 24px">
+    <div style="max-width:1200px;margin:auto">
+      <div style="display:flex;gap:10px;justify-content:center;margin-bottom:16px">
+        <a href="https://www.youtube.com/@sagarchowdhury-1991" target="_blank"
+          style="width:40px;height:40px;border-radius:50%;background:rgba(255,68,68,0.1);
+            border:1.5px solid rgba(255,68,68,0.3);display:flex;align-items:center;
+            justify-content:center;color:#ff4444;font-size:17px;text-decoration:none;transition:all 0.3s"
+          onmouseover="this.style.background='#ff4444';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(255,68,68,0.1)';this.style.color='#ff4444'">
+          <i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/sagar-chowdhury-507744264/" target="_blank"
+          style="width:40px;height:40px;border-radius:50%;background:rgba(10,102,194,0.1);
+            border:1.5px solid rgba(10,102,194,0.3);display:flex;align-items:center;
+            justify-content:center;color:#0a66c2;font-size:17px;text-decoration:none;transition:all 0.3s"
+          onmouseover="this.style.background='#0a66c2';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(10,102,194,0.1)';this.style.color='#0a66c2'">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/sagar.chowdhury.794/" target="_blank"
+          style="width:40px;height:40px;border-radius:50%;background:rgba(24,119,242,0.1);
+            border:1.5px solid rgba(24,119,242,0.3);display:flex;align-items:center;
+            justify-content:center;color:#1877f2;font-size:17px;text-decoration:none;transition:all 0.3s"
+          onmouseover="this.style.background='#1877f2';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(24,119,242,0.1)';this.style.color='#1877f2'">
+          <i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/sagar_chowdhury_official/" target="_blank"
+          style="width:40px;height:40px;border-radius:50%;background:rgba(225,48,108,0.1);
+            border:1.5px solid rgba(225,48,108,0.3);display:flex;align-items:center;
+            justify-content:center;color:#e1306c;font-size:17px;text-decoration:none;transition:all 0.3s"
+          onmouseover="this.style.background='#e1306c';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(225,48,108,0.1)';this.style.color='#e1306c'">
+          <i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918436090949" target="_blank"
+          style="width:40px;height:40px;border-radius:50%;background:rgba(37,211,102,0.1);
+            border:1.5px solid rgba(37,211,102,0.3);display:flex;align-items:center;
+            justify-content:center;color:#25d366;font-size:17px;text-decoration:none;transition:all 0.3s"
+          onmouseover="this.style.background='#25d366';this.style.color='#fff'"
+          onmouseout="this.style.background='rgba(37,211,102,0.1)';this.style.color='#25d366'">
+          <i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p style="text-align:center;font-size:13px;color:var(--text-muted);margin-bottom:6px">
+        © 2026 <strong style="color:var(--text-primary)">Sagar Chowdhury</strong>
+        · NISM Certified Research Analyst · Founder, Stock Pathshala
+      </p>
+      <p style="text-align:center;font-size:12px;color:var(--text-muted)">
+        ⚠️ Disclaimer: Educational content only. Not financial advice.
+        Investments are subject to market risks.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="mobile-nav.js"></script>
+</body>
+</html>
