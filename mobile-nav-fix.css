@@ -184,3 +184,139 @@ p, li, span {
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
+
+/* ============================================================
+   MOBILE RESPONSIVE FIXES
+   1. About Stock Pathshala hero card
+   2. Send a Message form (phone/email grid)
+   3. Mobile bottom navigation bar
+   ============================================================ */
+
+/* ── 1. About Stock Pathshala hero card ── */
+@media (max-width: 768px) {
+  /* The hero card inside #about-sp uses grid-template-columns:auto 1fr inline.
+     We override it to single column via a utility class added below. */
+  #about-sp > div:first-of-type {
+    grid-template-columns: 1fr !important;
+    padding: 24px !important;
+    gap: 20px !important;
+    text-align: center;
+  }
+  #about-sp > div:first-of-type > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-sp > div:first-of-type h3 {
+    font-size: 18px !important;
+  }
+  #about-sp > div:first-of-type p {
+    font-size: 14px !important;
+  }
+  #about-sp > div:first-of-type > div:last-child > div:last-child {
+    justify-content: center;
+  }
+}
+
+/* ── 2. Send a Message — phone/email 2-col grid collapse ── */
+@media (max-width: 640px) {
+  /* The inline style uses display:grid;grid-template-columns:1fr 1fr
+     We target the parent .contact-form-wrap grid inside */
+  .contact-form-wrap {
+    padding: 20px !important;
+  }
+  /* Force the phone/email row to single column */
+  .contact-form-wrap form > div[style*="grid-template-columns:1fr 1fr"],
+  .contact-form-wrap form > div[style*="grid-template-columns: 1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  /* Email/send alternative buttons row */
+  .contact-form-wrap form > div[style*="display:flex;gap:8px"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .contact-form-wrap form > div[style*="display:flex;gap:8px"] a {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* ── 3. Mobile Bottom Navigation Bar ── */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Show the bottom nav */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(5, 150, 105, 0.15);
+    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
+    padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .dark .mobile-bottom-nav {
+    background: rgba(11, 22, 40, 0.97);
+    border-top: 1px solid rgba(0, 208, 132, 0.15);
+  }
+
+  .mobile-bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s;
+    min-width: 52px;
+    text-align: center;
+  }
+
+  .mobile-bottom-nav a i {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .mobile-bottom-nav a.active,
+  .mobile-bottom-nav a:active {
+    color: var(--green);
+  }
+
+  .mobile-bottom-nav a.nav-enroll {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.35);
+  }
+
+  /* Push page content up so bottom nav doesn't cover it */
+  body {
+    padding-bottom: 72px;
+  }
+
+  /* Keep chatbot fab above bottom nav */
+  #sp-chat-fab {
+    bottom: 84px !important;
+  }
+
+  #sp-chat-widget {
+    bottom: 156px !important;
+  }
+}
