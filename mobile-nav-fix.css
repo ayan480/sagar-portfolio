@@ -243,13 +243,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ── 3. Mobile Bottom Navigation Bar ── */
+/* ── 3. Mobile Bottom Navigation Bar — Modern Redesign ── */
 .mobile-bottom-nav {
   display: none;
 }
 
 @media (max-width: 768px) {
-  /* Show the bottom nav */
+
   .mobile-bottom-nav {
     display: flex;
     position: fixed;
@@ -257,66 +257,165 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 998;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(5, 150, 105, 0.15);
-    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
-    padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+    /* Frosted glass base */
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(5, 150, 105, 0.12);
+    box-shadow:
+      0 -1px 0 rgba(255,255,255,0.6) inset,
+      0 -8px 32px rgba(0, 0, 0, 0.10);
+    padding: 6px 8px max(10px, env(safe-area-inset-bottom));
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
+    gap: 2px;
   }
 
   .dark .mobile-bottom-nav {
-    background: rgba(11, 22, 40, 0.97);
-    border-top: 1px solid rgba(0, 208, 132, 0.15);
+    background: rgba(8, 16, 32, 0.94);
+    border-top: 1px solid rgba(0, 208, 132, 0.12);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
   }
 
+  /* Regular nav items */
   .mobile-bottom-nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    padding: 4px 12px;
+    gap: 3px;
+    padding: 6px 10px 4px;
     text-decoration: none;
-    color: var(--text-muted);
-    font-size: 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    transition: all 0.2s;
-    min-width: 52px;
+    color: #94a3b8;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-radius: 14px;
+    transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    min-width: 48px;
     text-align: center;
+    position: relative;
   }
 
   .mobile-bottom-nav a i {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1;
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
+  /* Active dot indicator */
+  .mobile-bottom-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: #059669;
+    border-radius: 50%;
+  }
+
+  /* Active & hover state */
   .mobile-bottom-nav a.active,
   .mobile-bottom-nav a:active {
-    color: var(--green);
+    color: #059669;
+    background: rgba(5, 150, 105, 0.08);
   }
 
+  .mobile-bottom-nav a.active i,
+  .mobile-bottom-nav a:active i {
+    transform: translateY(-2px);
+  }
+
+  /* Hover effect for non-enroll items */
+  .mobile-bottom-nav a:not(.nav-enroll):hover {
+    color: #059669;
+    background: rgba(5, 150, 105, 0.06);
+  }
+
+  /* ── Centre Enroll FAB button ── */
   .mobile-bottom-nav a.nav-enroll {
-    background: linear-gradient(135deg, #059669, #047857);
+    position: relative;
+    bottom: 10px;
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
     color: #fff !important;
-    padding: 6px 14px;
-    border-radius: 50px;
-    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.35);
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    padding: 0;
+    border-radius: 50%;
+    box-shadow:
+      0 4px 16px rgba(5, 150, 105, 0.45),
+      0 0 0 3px rgba(255,255,255,0.9),
+      0 0 0 4px rgba(5,150,105,0.15);
+    justify-content: center;
+    font-size: 0; /* hide label */
+    letter-spacing: 0;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  /* Push page content up so bottom nav doesn't cover it */
+  .mobile-bottom-nav a.nav-enroll i {
+    font-size: 22px;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .mobile-bottom-nav a.nav-enroll::before {
+    content: 'Enroll';
+    position: absolute;
+    bottom: -16px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #059669;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+
+  .mobile-bottom-nav a.nav-enroll:hover,
+  .mobile-bottom-nav a.nav-enroll:active {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow:
+      0 8px 24px rgba(5, 150, 105, 0.55),
+      0 0 0 3px rgba(255,255,255,0.9),
+      0 0 0 5px rgba(5,150,105,0.2);
+  }
+
+  .mobile-bottom-nav a.nav-enroll:hover i {
+    transform: scale(1.1);
+  }
+
+  /* Dark mode adjustments */
+  .dark .mobile-bottom-nav a {
+    color: #4a6280;
+  }
+
+  .dark .mobile-bottom-nav a.active,
+  .dark .mobile-bottom-nav a:active {
+    color: #00d084;
+    background: rgba(0, 208, 132, 0.1);
+  }
+
+  .dark .mobile-bottom-nav a.nav-enroll {
+    box-shadow:
+      0 4px 16px rgba(5, 150, 105, 0.5),
+      0 0 0 3px rgba(8,16,32,0.9),
+      0 0 0 4px rgba(5,150,105,0.2);
+  }
+
+  .dark .mobile-bottom-nav a.nav-enroll::before {
+    color: #00d084;
+  }
+
+  /* Push page content up */
   body {
-    padding-bottom: 72px;
+    padding-bottom: 76px;
   }
 
-  /* Keep chatbot fab above bottom nav */
+  /* Chatbot FAB above bottom nav */
   #sp-chat-fab {
-    bottom: 84px !important;
+    bottom: 88px !important;
   }
 
   #sp-chat-widget {
-    bottom: 156px !important;
+    bottom: 160px !important;
   }
 }
