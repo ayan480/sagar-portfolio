@@ -53,14 +53,18 @@
           border:2px solid rgba(5,150,105,0.4);box-shadow:0 2px 8px rgba(5,150,105,0.2);
           flex-shrink:0"
         onerror="this.style.display='none'">
-      <div style="display:flex;flex-direction:column;gap:0px">
-        <div style="display:flex;align-items:baseline;gap:1px;line-height:1">
+      <div style="display:flex;flex-direction:column;gap:1px">
+        <div style="display:flex;align-items:center;gap:0px;line-height:1">
           <span style="font-size:20px;font-weight:900;color:#059669;letter-spacing:-0.5px">Stock</span>
           <span style="font-size:20px;font-weight:900;color:#dc2626;letter-spacing:-0.5px">Pathshala</span>
+          <span style="font-size:11px;font-weight:700;color:var(--text-muted);
+            margin-left:5px;padding:2px 7px;
+            background:linear-gradient(135deg,rgba(5,150,105,0.08),rgba(220,38,38,0.06));
+            border:1px solid rgba(5,150,105,0.2);border-radius:20px;
+            letter-spacing:0.4px;white-space:nowrap;font-style:italic">
+            <span style="color:#059669">by</span>&nbsp;<span style="color:#dc2626;font-style:normal;font-weight:800">Sagar</span>
+          </span>
         </div>
-        <span style="font-size:10px;font-weight:700;letter-spacing:0.5px;line-height:1;margin-top:1px">
-          <span style="color:#059669">by</span> <span style="color:#dc2626">Sagar</span>
-        </span>
       </div>
     </a>
 
@@ -150,7 +154,7 @@
       padding-top:28px;border-top:1px solid rgba(255,255,255,0.07)">
       <a href="tel:+918436090949" style="display:flex;align-items:center;gap:8px;
         color:var(--text-secondary);font-size:14px">
-        <i class="fas fa-phone" style="color:var(--green)"></i> +91 84360 90949
+        <i class="fas fa-phone" style="color:var(--green)"></i> <span id="hero-phone"></span>
       </a>
       <a href="https://www.linkedin.com/in/sagar-chowdhury-507744264/" target="_blank"
         style="display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:14px">
@@ -640,7 +644,7 @@
           <i class="fas fa-phone" style="color:var(--green)"></i></div>
         <div>
           <div style="font-weight:700;color:var(--text-primary);font-size:15px">Phone / WhatsApp</div>
-          <a href="tel:+918436090949" style="color:var(--green);font-size:14px">+91 84360 90949</a>
+          <a id="contact-phone" href="#" style="color:var(--green);font-size:14px">Loading…</a>
         </div>
       </div>
       <div class="contact-card">
@@ -648,8 +652,7 @@
           <i class="fas fa-envelope" style="color:var(--gold)"></i></div>
         <div>
           <div style="font-weight:700;color:var(--text-primary);font-size:15px">Email</div>
-          <a href="mailto:stockpathshalabysagar@gmail.com" style="color:var(--gold);font-size:13px">
-            stockpathshalabysagar@gmail.com</a>
+          <a id="contact-email" href="#" style="color:var(--gold);font-size:13px">Loading…</a>
         </div>
       </div>
       <div class="contact-card">
@@ -716,7 +719,7 @@
           <i class="fab fa-whatsapp"></i> &nbsp;Send via WhatsApp
         </button>
         <div style="display:flex;gap:8px;margin-top:12px">
-          <a href="mailto:stockpathshalabysagar@gmail.com?subject=Enquiry from Website"
+          <a id="form-email-btn" href="#"
             style="flex:1;display:flex;align-items:center;justify-content:center;gap:7px;
               padding:11px;background:var(--gold-soft);border:1.5px solid rgba(217,119,6,0.25);
               border-radius:var(--radius-full);color:var(--gold);font-weight:700;
@@ -953,7 +956,7 @@
           Contact Us
         </h4>
         <div style="display:flex;flex-direction:column;gap:16px">
-          <a href="tel:+918436090949"
+          <a id="footer-phone-link" href="#"
             style="display:flex;align-items:center;gap:12px;text-decoration:none;
               padding:12px 16px;background:var(--green-soft);border-radius:10px;
               border:1px solid var(--green-border);transition:all 0.3s"
@@ -966,11 +969,11 @@
             <div>
               <div style="font-size:11px;font-weight:700;color:var(--text-muted);
                 text-transform:uppercase;letter-spacing:0.5px">Phone / WhatsApp</div>
-              <div style="font-size:15px;font-weight:700;color:var(--green)">+91 84360 90949</div>
+              <div id="footer-phone" style="font-size:15px;font-weight:700;color:var(--green)"></div>
             </div>
           </a>
 
-          <a href="mailto:stockpathshalabysagar@gmail.com"
+          <a id="footer-email-link" href="#"
             style="display:flex;align-items:center;gap:12px;text-decoration:none;
               padding:12px 16px;background:var(--gold-soft);border-radius:10px;
               border:1px solid rgba(217,119,6,0.2);transition:all 0.3s"
@@ -984,8 +987,7 @@
             <div>
               <div style="font-size:11px;font-weight:700;color:var(--text-muted);
                 text-transform:uppercase;letter-spacing:0.5px">Email</div>
-              <div style="font-size:13px;font-weight:700;color:var(--gold)">
-                stockpathshalabysagar@gmail.com</div>
+              <div id="footer-email-text" style="font-size:13px;font-weight:700;color:var(--gold)"></div>
             </div>
           </a>
 
@@ -1475,5 +1477,34 @@ setInterval(refreshTicker, 60000);
 </nav>
 
 <script src="chatbot.js"></script>
+<script>
+// ── Contact Info Obfuscation ──────────────────────────────
+// Encoded to prevent plain-text scraping by bots
+(function(){
+  // Base64 encoded values decoded at runtime
+  var _p = atob('KzkxIDg0MzYwIDkwOTQ5');        // +91 84360 90949
+  var _pt = atob('dGVsOis5MTg0MzYwOTA5NDk=');   // tel:+918436090949
+  var _e = atob('c3RvY2twYXRoc2hhbGFieXNhZ2FyQGdtYWlsLmNvbQ=='); // email
+  var _m = 'mailto:' + _e;
+
+  function setLink(id, href, text) {
+    var el = document.getElementById(id);
+    if (el) { el.href = href; if (text) el.textContent = text; }
+  }
+  function setText(id, text) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = text;
+  }
+
+  setLink('contact-phone', _pt, _p);
+  setLink('contact-email', _m, _e);
+  setLink('form-email-btn', _m + '?subject=Enquiry%20from%20Website');
+  setLink('footer-phone-link', _pt);
+  setText('footer-phone', _p);
+  setLink('footer-email-link', _m);
+  setText('footer-email-text', _e);
+  setText('hero-phone', _p);
+})();
+</script>
 </body>
 </html>
