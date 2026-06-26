@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ayan480.github.io/sagar-portfolio/sitemap.xml
+Sitemap: https://stockpathshalabysagar.com/sitemap.xml
