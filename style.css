@@ -481,61 +481,77 @@ footer { }
   }
 }
 
-/* ── Course Announcement Banner ── */
-@keyframes bannerShift {
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+/* ── Course Announcement Carousel Banner ── */
+@keyframes fireWiggle {
+  0%   { transform: rotate(-8deg) scale(1); }
+  100% { transform: rotate(8deg) scale(1.15); }
 }
-@keyframes shimmer {
-  0%   { transform: translateX(-100%); }
-  60%  { transform: translateX(100%); }
-  100% { transform: translateX(100%); }
+.b-slide {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 40px 0 16px; height: 56px; flex-shrink: 0;
+  position: relative; overflow: hidden;
 }
-@keyframes enrollPulse {
-  0%,100% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
-  50%     { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
+.b-slide::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.06) 50%, transparent 60%);
+  animation: bannerShimmer 3s ease-in-out infinite;
+  pointer-events: none;
 }
-@keyframes courseScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes bannerShimmer {
+  0%   { transform: translateX(-120%); }
+  60%  { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
 }
-
-.c-item {
-  display: inline-flex; align-items: center;
-  font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.92);
-  padding: 0 18px; gap: 6px;
+.b-fire {
+  font-size: 18px; flex-shrink: 0;
+  animation: fireWiggle 0.55s ease-in-out infinite alternate;
 }
-.c-item strong { color: #fff; font-weight: 800; }
-
-.c-sep {
-  color: rgba(255,255,255,0.3); font-size: 10px; padding: 0 4px;
+.b-badge {
+  flex-shrink: 0; padding: 3px 10px;
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px; font-size: 10px; font-weight: 800;
+  color: #fff; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap;
 }
-
-.c-btn-view {
+.b-divider {
+  width: 1px; height: 22px; background: rgba(255,255,255,0.25); flex-shrink: 0;
+}
+.b-text {
+  flex: 1; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.95);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  line-height: 1.3;
+}
+.b-text strong { color: #fff; font-weight: 800; }
+.b-btns {
+  display: flex; gap: 8px; flex-shrink: 0; align-items: center;
+}
+.b-btn-ghost {
   display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 13px; margin: 0 10px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 20px; color: #fff; font-size: 11.5px;
-  font-weight: 700; text-decoration: none; white-space: nowrap;
-  transition: background 0.2s;
+  padding: 5px 12px; background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;
+  color: #fff; font-size: 11px; font-weight: 700;
+  text-decoration: none; white-space: nowrap; transition: background 0.2s;
 }
-.c-btn-view:hover { background: rgba(255,255,255,0.28); }
-
-.c-btn-enroll {
+.b-btn-ghost:hover { background: rgba(255,255,255,0.25); }
+.b-btn-solid {
   display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 14px; margin: 0 10px;
-  background: #fff; border-radius: 20px;
-  color: #059669; font-size: 11.5px;
-  font-weight: 800; text-decoration: none; white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: all 0.2s;
+  padding: 5px 14px; background: #fff; border-radius: 20px;
+  color: #047857; font-size: 11px; font-weight: 800;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.2s;
 }
-.c-btn-enroll:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.b-btn-solid:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.b-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(255,255,255,0.35); cursor: pointer; transition: all 0.2s;
+}
+.b-dot.active { background: #fff; width: 18px; border-radius: 3px; }
 
-#courseTicker:hover { animation-play-state: paused; }
-
-@media (max-width: 480px) {
-  .c-item { font-size: 11.5px; padding: 0 12px; }
-  .c-btn-view, .c-btn-enroll { font-size: 11px; padding: 4px 10px; }
+@media (max-width: 640px) {
+  .b-divider, .b-badge { display: none; }
+  .b-text { font-size: 11.5px; }
+  .b-btns { gap: 5px; }
+  .b-btn-ghost { display: none; }
+  .b-btn-solid { font-size: 10.5px; padding: 5px 10px; }
+  .b-slide { padding: 0 36px 0 12px; gap: 8px; }
 }
