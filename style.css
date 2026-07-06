@@ -481,10 +481,4 @@ footer { }
   }
 }
 
-/* ── Course Announcement Marquee Banner ── */
-@keyframes marqueeRun {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-#bannerMarquee { animation: marqueeRun 14s linear infinite; }
-#bannerMarquee:hover { animation-play-state: paused; }
+/* ── Course Announcement Banner ── */
