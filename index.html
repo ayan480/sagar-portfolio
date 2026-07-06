@@ -192,64 +192,53 @@
 </nav>
 
 <!-- ── Stock Ticker ── -->
-<!-- ── Course Announcement Carousel Banner ── -->
-<div id="courseBanner" style="margin-top:69px;position:relative;overflow:hidden;z-index:10;height:52px;background:#047857;line-height:1">
+<!-- ── Course Announcement Running Banner ── -->
+<div id="courseBanner" style="margin-top:69px;position:relative;overflow:hidden;z-index:10;height:46px;background:linear-gradient(90deg,#065f46,#047857,#059669,#047857,#065f46)">
+  <div style="display:flex;align-items:center;height:100%">
 
-  <div id="bannerSlides" style="display:flex;height:100%;width:300%;transition:transform 0.5s ease">
-
-    <!-- Slide 1 -->
-    <div style="width:33.333%;height:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 40px;background:linear-gradient(90deg,#065f46,#047857)">
-      <span style="font-size:16px;line-height:1;flex-shrink:0">🔥</span>
-      <span style="font-size:13px;font-weight:700;color:#ffffff;white-space:nowrap;line-height:1"><strong style="color:#ffffff">Equity Research &amp; Trading</strong> — Now Enrolling</span>
-      <a href="course-equity-research.html" style="flex-shrink:0;padding:6px 14px;background:rgba(255,255,255,0.2);border:1.5px solid #ffffff;border-radius:20px;color:#ffffff;font-size:11px;font-weight:700;text-decoration:none;white-space:nowrap;line-height:1">View Details</a>
-      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20Equity%20Research%20and%20Trading" target="_blank" style="flex-shrink:0;padding:6px 14px;background:#ffffff;border-radius:20px;color:#047857;font-size:11px;font-weight:800;text-decoration:none;white-space:nowrap;line-height:1">Enroll Now</a>
+    <!-- Fixed left label -->
+    <div style="flex-shrink:0;display:flex;align-items:center;gap:6px;height:100%;padding:0 12px;background:rgba(0,0,0,0.28);border-right:1px solid rgba(255,255,255,0.2)">
+      <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;animation:livePulse 1.2s ease-in-out infinite;flex-shrink:0"></span>
+      <span style="font-size:9.5px;font-weight:900;color:#ffffff;letter-spacing:1.2px;white-space:nowrap;text-transform:uppercase">Live Batch</span>
     </div>
 
-    <!-- Slide 2 -->
-    <div style="width:33.333%;height:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 40px;background:linear-gradient(90deg,#1e40af,#1d4ed8)">
-      <span style="font-size:16px;line-height:1;flex-shrink:0">📈</span>
-      <span style="font-size:13px;font-weight:600;color:#ffffff;white-space:nowrap;line-height:1">10 Classes · Portfolio · Fundamental Analysis · Ratios</span>
-      <a href="course-equity-research.html" style="flex-shrink:0;padding:6px 14px;background:#ffffff;border-radius:20px;color:#1d4ed8;font-size:11px;font-weight:800;text-decoration:none;white-space:nowrap;line-height:1">See Syllabus</a>
+    <!-- Scrolling marquee — all content runs left, works on any screen width -->
+    <div style="overflow:hidden;flex:1;position:relative">
+      <div id="bannerMarquee" style="display:inline-flex;align-items:center;white-space:nowrap;animation:marqueeRun 14s linear infinite">
+
+        <span style="font-size:12px;font-weight:700;color:#ffffff;padding:0 16px">🔥&nbsp;<strong style="color:#ffffff">Equity Research &amp; Trading</strong>&nbsp;— Now Enrolling</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <a href="course-equity-research.html" style="font-size:11px;font-weight:700;color:#ffffff;padding:3px 11px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.4);border-radius:20px;text-decoration:none;white-space:nowrap;margin:0 6px;flex-shrink:0">📄 Syllabus</a>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20Equity%20Research%20and%20Trading" target="_blank" style="font-size:11px;font-weight:800;color:#047857;padding:3px 12px;background:#ffffff;border-radius:20px;text-decoration:none;white-space:nowrap;margin:0 6px;flex-shrink:0">💬 Enroll</a>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <span style="font-size:12px;font-weight:600;color:#ffffff;padding:0 16px">📈&nbsp;Portfolio · Fundamental Analysis · Ratios · Stock Screeners</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <span style="font-size:12px;font-weight:600;color:#ffffff;padding:0 16px">🗣️&nbsp;Bengali &amp; Hindi · NISM Certified · Sagar Chowdhury</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+
+        <!-- Duplicate for seamless infinite loop -->
+        <span style="font-size:12px;font-weight:700;color:#ffffff;padding:0 16px">🔥&nbsp;<strong style="color:#ffffff">Equity Research &amp; Trading</strong>&nbsp;— Now Enrolling</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <a href="course-equity-research.html" style="font-size:11px;font-weight:700;color:#ffffff;padding:3px 11px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.4);border-radius:20px;text-decoration:none;white-space:nowrap;margin:0 6px;flex-shrink:0">📄 Syllabus</a>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20Equity%20Research%20and%20Trading" target="_blank" style="font-size:11px;font-weight:800;color:#047857;padding:3px 12px;background:#ffffff;border-radius:20px;text-decoration:none;white-space:nowrap;margin:0 6px;flex-shrink:0">💬 Enroll</a>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <span style="font-size:12px;font-weight:600;color:#ffffff;padding:0 16px">📈&nbsp;Portfolio · Fundamental Analysis · Ratios · Stock Screeners</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+        <span style="font-size:12px;font-weight:600;color:#ffffff;padding:0 16px">🗣️&nbsp;Bengali &amp; Hindi · NISM Certified · Sagar Chowdhury</span>
+        <span style="color:rgba(255,255,255,0.3);padding:0 6px">|</span>
+
+      </div>
     </div>
 
-    <!-- Slide 3 -->
-    <div style="width:33.333%;height:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 40px;background:linear-gradient(90deg,#92400e,#b45309)">
-      <span style="font-size:16px;line-height:1;flex-shrink:0">🗣️</span>
-      <span style="font-size:13px;font-weight:600;color:#ffffff;white-space:nowrap;line-height:1">Bengali &amp; Hindi · NISM Certified · <strong style="color:#ffffff">Sagar Chowdhury</strong></span>
-      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20more%20info%20about%20your%20courses" target="_blank" style="flex-shrink:0;padding:6px 14px;background:#ffffff;border-radius:20px;color:#b45309;font-size:11px;font-weight:800;text-decoration:none;white-space:nowrap;line-height:1">Enquire</a>
-    </div>
-
+    <!-- Close -->
+    <button onclick="document.getElementById('courseBanner').style.display='none'"
+      style="flex-shrink:0;width:30px;height:100%;background:rgba(0,0,0,0.25);border:none;
+        border-left:1px solid rgba(255,255,255,0.15);color:#ffffff;font-size:13px;cursor:pointer"
+      aria-label="Close">✕</button>
   </div>
-
-  <!-- Dot indicators -->
-  <div style="position:absolute;bottom:5px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:3">
-    <span class="b-dot active"></span>
-    <span class="b-dot"></span>
-    <span class="b-dot"></span>
-  </div>
-
-  <!-- Close -->
-  <button onclick="document.getElementById('courseBanner').style.display='none';clearInterval(window._bt)" aria-label="Close"
-    style="position:absolute;right:0;top:0;width:32px;height:100%;z-index:4;background:rgba(0,0,0,0.2);border:none;border-left:1px solid rgba(255,255,255,0.2);color:#ffffff;font-size:14px;cursor:pointer">✕</button>
-
 </div>
-
-<script>
-(function(){
-  var cur=0, total=3;
-  var track=document.getElementById('bannerSlides');
-  var dots=document.querySelectorAll('.b-dot');
-  function go(n){
-    cur=(n+total)%total;
-    track.style.transform='translateX(-'+(cur*(100/total))+'%)';
-    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
-  }
-  window._bt=setInterval(function(){go(cur+1);},4000);
-  track.addEventListener('mouseenter',function(){clearInterval(window._bt);});
-  track.addEventListener('mouseleave',function(){window._bt=setInterval(function(){go(cur+1);},4000);});
-  dots.forEach(function(d,i){d.addEventListener('click',function(){clearInterval(window._bt);go(i);window._bt=setInterval(function(){go(cur+1);},4000);});});
-})();
-</script>
 
 <div class="container">
 
