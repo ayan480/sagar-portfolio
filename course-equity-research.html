@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equity Investment Module | Stock Pathshala by Sagar</title>
+<meta name="description" content="Equity Research and Trading course syllabus — 10-day module covering portfolio management, fundamental analysis, balance sheet, cash flow, ratios and stock screening. Stock Pathshala by Sagar Chowdhury.">
+<link rel="canonical" href="https://stockpathshalabysagar.com/course-equity-research.html">
+<link rel="icon" type="image/png" href="assets/stock-pathshala-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Course page styles ── */
+body { background: var(--bg-primary); }
+.course-hero {
+  background: linear-gradient(135deg, #059669 0%, #047857 60%, #065f46 100%);
+  padding: 60px 24px 48px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.course-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.course-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+.course-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 16px; background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3); border-radius: 50px;
+  font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 18px;
+  letter-spacing: 0.4px;
+}
+.course-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 800; color: #fff;
+  margin-bottom: 12px; line-height: 1.2;
+}
+.course-hero p { font-size: 15px; opacity: 0.9; line-height: 1.7; margin-bottom: 24px; }
+.course-meta-strip {
+  display: inline-flex; gap: 28px; flex-wrap: wrap; justify-content: center;
+  background: rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 14px 28px; border: 1px solid rgba(255,255,255,0.2);
+}
+.course-meta-item { text-align: center; }
+.course-meta-item .val { font-size: 20px; font-weight: 900; color: #fff; line-height: 1; }
+.course-meta-item .lbl { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; font-weight: 600; }
+.course-actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px;
+}
+.btn-dl {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 50px; font-weight: 800;
+  font-size: 14px; text-decoration: none; cursor: pointer;
+  transition: all 0.2s; border: none;
+}
+.btn-dl.primary { background: #fff; color: #059669; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.btn-dl.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.2); }
+.btn-dl.outline { background: rgba(255,255,255,0.15); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+.btn-dl.outline:hover { background: rgba(255,255,255,0.25); }
+.course-body { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+.quote-box {
+  background: linear-gradient(135deg, rgba(5,150,105,0.06), rgba(5,150,105,0.02));
+  border-left: 4px solid #059669; border-radius: 0 12px 12px 0;
+  padding: 20px 24px; margin-bottom: 40px;
+}
+.quote-box p { font-size: 16px; font-style: italic; color: var(--text-primary); font-weight: 600; line-height: 1.7; margin: 0; }
+.quote-box span { font-size: 13px; color: var(--text-muted); font-style: normal; display: block; margin-top: 8px; }
+.day-card {
+  background: var(--bg-card); border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 20px; overflow: hidden;
+}
+.day-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 24px; cursor: pointer;
+  background: var(--bg-card); transition: background 0.2s;
+  border: none; width: 100%; text-align: left;
+}
+.day-header:hover { background: var(--bg-secondary); }
+.day-num {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  background: linear-gradient(135deg, #059669, #047857);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 900; color: #fff; letter-spacing: 0.3px;
+}
+.day-title { flex: 1; }
+.day-title strong { font-size: 15px; font-weight: 800; color: var(--text-primary); display: block; }
+.day-title span { font-size: 12px; color: var(--text-muted); margin-top: 2px; display: block; }
+.day-chevron { color: var(--text-muted); font-size: 13px; transition: transform 0.25s; }
+.day-header.open .day-chevron { transform: rotate(180deg); }
+.day-body { padding: 0 24px 20px; display: none; }
+.day-body.open { display: block; }
+.topic-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.topic-item:last-child { border-bottom: none; }
+.topic-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #059669;
+  flex-shrink: 0; margin-top: 6px;
+}
+.topic-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.topic-text strong { color: var(--text-primary); }
+.bengali { font-size: 13px; color: var(--text-muted); display: block; margin-top: 3px; }
+.tools-section {
+  background: var(--bg-card); border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.07); padding: 28px;
+  margin-top: 32px;
+}
+.tools-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px; margin-top: 16px;
+}
+.tool-chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px; background: var(--bg-secondary);
+  border-radius: 10px; font-size: 13px; font-weight: 600;
+  color: var(--text-secondary); text-decoration: none;
+  border: 1px solid rgba(5,150,105,0.12); transition: all 0.2s;
+}
+.tool-chip:hover { border-color: #059669; color: #059669; background: var(--green-soft); }
+.enroll-cta {
+  background: linear-gradient(135deg, #059669, #047857);
+  border-radius: 20px; padding: 36px; text-align: center;
+  margin-top: 36px; color: #fff;
+}
+.enroll-cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+.enroll-cta p { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+@media print {
+  .course-actions, nav, footer, .enroll-cta button, .day-chevron { display: none !important; }
+  .day-body { display: block !important; }
+  .day-card { box-shadow: none; border: 1px solid #e5e7eb; page-break-inside: avoid; }
+  .course-hero { background: #059669 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { padding-bottom: 0 !important; }
+}
+@media (max-width: 600px) {
+  .course-hero h1 { font-size: 26px; }
+  .course-meta-strip { gap: 16px; padding: 12px 16px; }
+  .course-body { padding: 28px 16px 80px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav style="position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(20px);border-bottom:1px solid rgba(5,150,105,0.15);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 1px 10px rgba(0,0,0,0.06)">
+  <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none">
+    <img src="assets/stock-pathshala-logo.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(5,150,105,0.3)">
+    <div style="line-height:1">
+      <span style="font-size:16px;font-weight:900;color:#059669">Stock</span><span style="font-size:16px;font-weight:900;color:#dc2626">Pathshala</span>
+      <span style="font-size:9px;font-weight:700;color:#059669;display:block;margin-top:-1px"><em>by</em> <b style="color:#dc2626">Sagar</b></span>
+    </div>
+  </a>
+  <div style="display:flex;gap:10px">
+    <button onclick="window.print()" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+      background:var(--green-soft,rgba(5,150,105,0.1));border:1.5px solid rgba(5,150,105,0.25);
+      border-radius:50px;color:#059669;font-weight:700;font-size:12px;cursor:pointer">
+      <i class="fas fa-print"></i> Print / PDF
+    </button>
+    <a href="index.html#classes" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+      background:#059669;border-radius:50px;color:#fff;font-weight:700;font-size:12px;text-decoration:none">
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="course-hero">
+  <div class="course-hero-inner">
+    <div class="course-badge"><i class="fas fa-certificate"></i> NISM Certified Educator · Stock Pathshala</div>
+    <h1>Equity Investment Module</h1>
+    <p>A comprehensive 10-class practical course on equity research, fundamental analysis,<br>portfolio building and stock selection — taught in Bengali & Hindi.</p>
+    <div class="course-meta-strip">
+      <div class="course-meta-item"><div class="val">10</div><div class="lbl">Classes</div></div>
+      <div class="course-meta-item"><div class="val">Beginner</div><div class="lbl">to Advanced</div></div>
+      <div class="course-meta-item"><div class="val">Bengali</div><div class="lbl">& Hindi</div></div>
+      <div class="course-meta-item"><div class="val">Live</div><div class="lbl">Online</div></div>
+    </div>
+    <div class="course-actions">
+      <button onclick="window.print()" class="btn-dl primary">
+        <i class="fas fa-file-pdf"></i> Download as PDF
+      </button>
+      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20the%20Equity%20Investment%20Module" target="_blank" class="btn-dl outline">
+        <i class="fab fa-whatsapp"></i> Enroll Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="course-body">
+
+  <!-- Quote -->
+  <div class="quote-box">
+    <p>"Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it."</p>
+    <span>— Albert Einstein</span>
+  </div>
+
+  <!-- Day 1 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">D1</div>
+      <div class="day-title">
+        <strong>Investment Portfolio Management</strong>
+        <span>Portfolio building, REITs / InvITs / ETF</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Portfolio কী?</strong> কোন কোন বিষয় খেয়াল রাখবো?<span class="bengali">কী ভাবে একটা Portfolio তৈরি করবো, কোন কোন বিষয় এর উপর ভিত্তি করে Portfolio তৈরি করা হবে।</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Investment Portfolio and Target Portfolio</strong><span class="bengali">কোন বিষয়ের উপর ভিত্তি করে Portfolio তৈরি করবো?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>REITs / InvITs / ETF</strong> — TradingView and Demat practical use</div></div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D2</div>
+      <div class="day-title">
+        <strong>Importance & Basics of Stock Analysis</strong>
+        <span>Shareholding Analysis, Block Deals, Insider Trading</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Stock Analysis First Principles</strong><span class="bengali">যে কোন Stock Analysis এর প্রথম শর্ত গুলো কী কী?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Shareholding Analysis</strong><span class="bengali">Shareholding দেখে কী ভাবে Investment Decision নেব?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Block Deals & Insider Trading</strong> — identifying signals from institutional activity</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Stock Selection</strong> from Deals, Trades and Shareholding patterns</div></div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D3</div>
+      <div class="day-title">
+        <strong>Two Types of Fundamental Approach</strong>
+        <span>Top-Down vs Bottom-Up · Qualitative Analysis</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Top-Down vs Bottom-Up Approach</strong><span class="bengali">কোন পদ্ধতিতে যাওয়া উচিৎ একজন সাধারণ ইনভেস্টরের?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Qualitative Analysis</strong> — Company details, management quality, moat<span class="bengali">স্টক Selection এর ক্ষেত্রে Top Down এবং Bottom Up Approach কে কী ভাবে কাজে লাগাতে হবে</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Target Sector & Company Selection</strong><span class="bengali">Target Sector and Target Company কী ভাবে Choice করবেন?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Risk Identification</strong> — Opportunities vs risks in target company and sector</div></div>
+    </div>
+  </div>
+</div>
+
+  <!-- Day 4 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D4</div>
+      <div class="day-title">
+        <strong>Quantitative Analysis & Result Analysis</strong>
+        <span>P&L Analysis · Financial Health Assessment</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Result Analysis</strong> — why and how to read quarterly results<span class="bengali">কোন Companyর রেজাল্ট Analysis করবো কেন?</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Profit & Loss Analysis</strong><span class="bengali">Target Company অর্থনৈতিক অবস্থা বর্তমানে কী রকম ও ভবিষ্যৎ এ কী রকম হতে পারে</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Key Metrics to Target</strong> — revenue growth, margins, EPS, EBITDA<span class="bengali">মূল কোন কোন বিষয় গুলো Target করতে হবে Analysis করার</span></div></div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D5</div>
+      <div class="day-title">
+        <strong>Balance Sheet Analysis & Valuation</strong>
+        <span>Peter Lynch · DCF · Book Value · AI Analysis</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Balance Sheet Analysis</strong> — assets, liabilities, net worth<span class="bengali">Book Value কেন গুরুত্বপূর্ণ</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Valuation Methods</strong> — Peter Lynch approach, Reverse DCF</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Concall Analysis</strong> — how to extract insights from earnings calls</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Use of AI Prompts</strong> for company analysis<span class="bengali">AI ব্যবহার করে কী ভাবে কোন কোম্পানী কে Analysis করবো</span></div></div>
+    </div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D6</div>
+      <div class="day-title">
+        <strong>Cash Flow Analysis & DCF</strong>
+        <span>Why Cash Flow matters · DCF application</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Why Cash Flow is Critical</strong><span class="bengali">কেন Cash Flow গুরুত্বপূর্ণ, কেন Cash Flow না থাকলে শেয়ার এর দাম কমে যাবে</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Cash Flow Signals</strong><span class="bengali">Cash Flow দেখে কোন বিষয় গুলো অনুমান করা যায়</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>DCF (Discounted Cash Flow)</strong> — practical application for stock valuation</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Ratio Analysis</strong> — introduction and importance</div></div>
+    </div>
+  </div>
+
+  <!-- Day 7 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D7</div>
+      <div class="day-title">
+        <strong>Important Ratios & Their Use</strong>
+        <span>Sector-wise Key Ratios · Valuation Ratios</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Key Financial Ratios</strong> — PE, PB, ROE, ROCE, Debt/Equity, Current Ratio<span class="bengali">বিভিন্ন Ratio গুলোর গুরুত্ব কী, কেন তাদের দেখবো</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Sector-wise Important Ratios</strong><span class="bengali">কোন কোন Sector এর Key Ratio এবং Word কী কী</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Valuation Understanding</strong> — which ratios to use for which type of stock<span class="bengali">কোন কোন Ratios একটা Stock এর Valuation বোঝার জন্য ব্যবহার করব</span></div></div>
+    </div>
+  </div>
+
+  <!-- Day 8 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D8</div>
+      <div class="day-title">
+        <strong>Query Run — Stock Screeners</strong>
+        <span>Screener Queries · ChartInk · Sector Analysis</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Stock Finding with Screener Queries</strong> — building custom filters</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>ChartInk Queries</strong> for technical + fundamental combo screening</div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Sector Analysis</strong> using ChartInk — identifying sector rotations and leaders</div></div>
+    </div>
+  </div>
+
+  <!-- Day 9 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D9</div>
+      <div class="day-title">
+        <strong>Create a Portfolio — Equity & Mutual Fund</strong>
+        <span>Diversification · Asset Allocation · One Pager Analysis</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Building a Diversified Portfolio</strong><span class="bengali">Ultimate একটা Portfolio তৈরি করা, যেখানে Diversification সহ Assets Allocation করা থাকবে</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Live One-Pager Stock Analysis</strong> — selecting a stock and doing full analysis practically<span class="bengali">একটা Stock Selection থেকে একটা Stock Analysis করে One Pager Analysis এর পুরো বিষয় টি Practical ভাবে করে দেখানো</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Equity + Mutual Fund</strong> portfolio construction strategy</div></div>
+    </div>
+  </div>
+
+  <!-- Day 10 -->
+  <div class="day-card">
+    <button class="day-header" onclick="toggleDay(this)">
+      <div class="day-num">D10</div>
+      <div class="day-title">
+        <strong>Course Summarization & Tools</strong>
+        <span>Full recap · Financial Analysis Websites</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body">
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Complete Course Recap</strong><span class="bengali">পুরো Course এ যে যে বিষয় গুলো আলোচনা হয়েছে তার একটা সারাংশ আলোচনা করা হবে</span></div></div>
+      <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Use of Websites for Financial Analysis</strong> — live walkthrough of all platforms</div></div>
+    </div>
+  </div>
+
+  <!-- Tools section -->
+  <div class="tools-section">
+    <h3 style="font-size:17px;font-weight:800;color:var(--text-primary);margin-bottom:4px">
+      <i class="fas fa-tools" style="color:#059669"></i> &nbsp;Websites & Tools Covered
+    </h3>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:0">All platforms taught hands-on during the course</p>
+    <div class="tools-grid">
+      <a href="https://www.screener.in" target="_blank" class="tool-chip"><i class="fas fa-search-dollar" style="color:#059669"></i> Screener.in</a>
+      <a href="https://tijorifinance.com" target="_blank" class="tool-chip"><i class="fas fa-chart-bar" style="color:#3b82f6"></i> TijoriFinance.com</a>
+      <a href="https://www.equitymaster.com" target="_blank" class="tool-chip"><i class="fas fa-crown" style="color:#d97706"></i> Equitymaster.com</a>
+      <a href="https://www.tradingview.com" target="_blank" class="tool-chip"><i class="fas fa-chart-line" style="color:#2962ff"></i> TradingView</a>
+      <a href="https://www.moneycontrol.com" target="_blank" class="tool-chip"><i class="fas fa-newspaper" style="color:#dc2626"></i> Moneycontrol</a>
+      <a href="https://www.trendlyne.com" target="_blank" class="tool-chip"><i class="fas fa-brain" style="color:#8b5cf6"></i> Trendlyne</a>
+      <a href="https://www.nseindia.com" target="_blank" class="tool-chip"><i class="fas fa-building-columns" style="color:#059669"></i> NSE India</a>
+      <a href="https://chartink.com" target="_blank" class="tool-chip"><i class="fas fa-filter" style="color:#06b6d4"></i> ChartInk</a>
+      <div class="tool-chip"><i class="fas fa-robot" style="color:#6366f1"></i> AI Websites</div>
+    </div>
+  </div>
+
+  <!-- Enroll CTA -->
+  <div class="enroll-cta">
+    <h3>Ready to Start Your Investing Journey?</h3>
+    <p>Join Sagar Chowdhury's Equity Investment Module and learn to research stocks like a professional analyst.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20the%20Equity%20Investment%20Module"
+        target="_blank" class="btn-dl primary">
+        <i class="fab fa-whatsapp"></i> Enroll via WhatsApp
+      </a>
+      <button onclick="window.print()" class="btn-dl outline">
+        <i class="fas fa-file-pdf"></i> Download Syllabus PDF
+      </button>
+    </div>
+  </div>
+
+</div><!-- /course-body -->
+
+<script>
+function toggleDay(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>
