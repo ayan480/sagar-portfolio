@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Blogs | Stock Pathshala</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <a href="index" class="btn outline-red"><i class="fas fa-arrow-left"></i> Back Home</a>
+      <div>
+        <p class="tag green">All Posts</p>
+        <h1>Latest Insights</h1>
+        <p class="page-subtitle">A full vertical view of all blog posts.</p>
+      </div>
+    </div>
+    <div id="allBlogList" class="blog-wall"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+  <script src="blogs.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.initAllBlogsPage) {
+        window.initAllBlogsPage();
+      }
+    });
+  </script>
+</body>
+</html>
