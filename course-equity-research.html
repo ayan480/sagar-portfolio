@@ -152,20 +152,25 @@ body { background: var(--bg-primary); }
   backdrop-filter:blur(20px);border-bottom:1px solid rgba(5,150,105,0.15);
   padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
   box-shadow:0 1px 10px rgba(0,0,0,0.06)">
-  <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none">
+  <a href="index" style="display:flex;align-items:center;gap:8px;text-decoration:none">
     <img src="assets/stock-pathshala-logo.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(5,150,105,0.3)">
     <div style="line-height:1">
       <span style="font-size:16px;font-weight:900;color:#059669">Stock</span><span style="font-size:16px;font-weight:900;color:#dc2626">Pathshala</span>
       <span style="font-size:9px;font-weight:700;color:#059669;display:block;margin-top:-1px"><em>by</em> <b style="color:#dc2626">Sagar</b></span>
     </div>
   </a>
-  <div style="display:flex;gap:10px">
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="all-blogs" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+      background:rgba(5,150,105,0.1);border:1.5px solid rgba(5,150,105,0.25);
+      border-radius:50px;color:#059669;font-weight:700;font-size:12px;text-decoration:none">
+      <i class="fas fa-newspaper"></i> Blogs
+    </a>
     <button onclick="window.print()" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
       background:var(--green-soft,rgba(5,150,105,0.1));border:1.5px solid rgba(5,150,105,0.25);
       border-radius:50px;color:#059669;font-weight:700;font-size:12px;cursor:pointer">
       <i class="fas fa-print"></i> Print / PDF
     </button>
-    <a href="index.html#classes" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+    <a href="index#classes" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
       background:#059669;border-radius:50px;color:#fff;font-weight:700;font-size:12px;text-decoration:none">
       <i class="fas fa-arrow-left"></i> Back
     </a>
