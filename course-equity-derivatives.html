@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equity Derivatives Trading & Planning | Stock Pathshala by Sagar</title>
+<meta name="description" content="Equity Derivatives Trading & Planning course syllabus — 8-class module covering futures, options, Greeks, volatility strategies, hedging and professional risk management. Stock Pathshala by Sagar Chowdhury.">
+<link rel="canonical" href="https://stockpathshalabysagar.com/course-equity-derivatives">
+<link rel="icon" type="image/png" href="assets/stock-pathshala-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Course page styles ── */
+body { background: var(--bg-primary); }
+.course-hero {
+  background: linear-gradient(135deg, #059669 0%, #047857 60%, #065f46 100%);
+  padding: 60px 24px 48px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.course-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.course-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+.course-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 16px; background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3); border-radius: 50px;
+  font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 18px;
+  letter-spacing: 0.4px;
+}
+.course-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 800; color: #fff;
+  margin-bottom: 12px; line-height: 1.2;
+}
+.course-hero p { font-size: 15px; opacity: 0.9; line-height: 1.7; margin-bottom: 24px; }
+.course-meta-strip {
+  display: inline-flex; gap: 28px; flex-wrap: wrap; justify-content: center;
+  background: rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 14px 28px; border: 1px solid rgba(255,255,255,0.2);
+}
+.course-meta-item { text-align: center; }
+.course-meta-item .val { font-size: 20px; font-weight: 900; color: #fff; line-height: 1; }
+.course-meta-item .lbl { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; font-weight: 600; }
+.course-actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px;
+}
+.btn-dl {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 50px; font-weight: 800;
+  font-size: 14px; text-decoration: none; cursor: pointer;
+  transition: all 0.2s; border: none;
+}
+.btn-dl.primary { background: #fff; color: #059669; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.btn-dl.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.2); }
+.btn-dl.outline { background: rgba(255,255,255,0.15); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+.btn-dl.outline:hover { background: rgba(255,255,255,0.25); }
+.course-body { max-width: 860px; margin: 0 auto; padding: 48px 24px 80px; }
+.quote-box {
+  background: linear-gradient(135deg, rgba(5,150,105,0.06), rgba(5,150,105,0.02));
+  border-left: 4px solid #059669; border-radius: 0 12px 12px 0;
+  padding: 20px 24px; margin-bottom: 40px;
+}
+.quote-box p { font-size: 16px; font-style: italic; color: var(--text-primary); font-weight: 600; line-height: 1.7; margin: 0; }
+.quote-box span { font-size: 13px; color: var(--text-muted); font-style: normal; display: block; margin-top: 8px; }
+.day-card {
+  background: var(--bg-card); border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.07); box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 20px; overflow: hidden;
+}
+.day-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 24px; cursor: pointer;
+  background: var(--bg-card); transition: background 0.2s;
+  border: none; width: 100%; text-align: left;
+}
+.day-header:hover { background: var(--bg-secondary); }
+.day-num {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  background: linear-gradient(135deg, #059669, #047857);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 900; color: #fff; letter-spacing: 0.3px;
+}
+.day-title { flex: 1; }
+.day-title strong { font-size: 15px; font-weight: 800; color: var(--text-primary); display: block; }
+.day-title span { font-size: 12px; color: var(--text-muted); margin-top: 2px; display: block; }
+.day-chevron { color: var(--text-muted); font-size: 13px; transition: transform 0.25s; }
+.day-header.open .day-chevron { transform: rotate(180deg); }
+.day-body { padding: 0 24px 20px; display: none; }
+.day-body.open { display: block; }
+.topic-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.topic-item:last-child { border-bottom: none; }
+.topic-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #059669;
+  flex-shrink: 0; margin-top: 6px;
+}
+.topic-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.topic-text strong { color: var(--text-primary); }
+.sub-list { margin-top: 8px; padding-left: 4px; display: flex; flex-direction: column; gap: 6px; }
+.sub-item {
+  display: flex; gap: 8px; align-items: flex-start;
+  font-size: 13px; color: var(--text-secondary); line-height: 1.55;
+}
+.sub-item::before {
+  content: '›'; color: #059669; font-weight: 800; font-size: 15px;
+  flex-shrink: 0; line-height: 1.3;
+}
+.tools-section {
+  background: var(--bg-card); border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.07); padding: 28px;
+  margin-top: 32px;
+}
+.tools-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px; margin-top: 16px;
+}
+.tool-chip {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 14px; background: var(--bg-secondary);
+  border-radius: 10px; font-size: 13px; font-weight: 600;
+  color: var(--text-secondary); text-decoration: none;
+  border: 1px solid rgba(5,150,105,0.12); transition: all 0.2s;
+}
+.tool-chip:hover { border-color: #059669; color: #059669; background: rgba(5,150,105,0.06); }
+.enroll-cta {
+  background: linear-gradient(135deg, #059669, #047857);
+  border-radius: 20px; padding: 36px; text-align: center;
+  margin-top: 36px; color: #fff;
+}
+.enroll-cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+.enroll-cta p { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+@media print {
+  .course-actions, nav, footer, .enroll-cta button, .day-chevron { display: none !important; }
+  .day-body { display: block !important; }
+  .day-card { box-shadow: none; border: 1px solid #e5e7eb; page-break-inside: avoid; }
+  .course-hero { background: #059669 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { padding-bottom: 0 !important; }
+}
+@media (max-width: 600px) {
+  .course-hero h1 { font-size: 26px; }
+  .course-meta-strip { gap: 16px; padding: 12px 16px; }
+  .course-body { padding: 28px 16px 80px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav style="position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(20px);border-bottom:1px solid rgba(5,150,105,0.15);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 1px 10px rgba(0,0,0,0.06)">
+  <a href="index" style="display:flex;align-items:center;gap:8px;text-decoration:none">
+    <img src="assets/stock-pathshala-logo.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(5,150,105,0.3)">
+    <div style="line-height:1">
+      <span style="font-size:16px;font-weight:900;color:#059669">Stock</span><span style="font-size:16px;font-weight:900;color:#dc2626">Pathshala</span>
+      <span style="font-size:9px;font-weight:700;color:#059669;display:block;margin-top:-1px"><em>by</em> <b style="color:#dc2626">Sagar</b></span>
+    </div>
+  </a>
+  <div style="display:flex;gap:10px;align-items:center">
+    <button onclick="window.print()" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+      background:rgba(5,150,105,0.08);border:1.5px solid rgba(5,150,105,0.25);
+      border-radius:50px;color:#059669;font-weight:700;font-size:12px;cursor:pointer">
+      <i class="fas fa-print"></i> Print / PDF
+    </button>
+    <a href="index#classes" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
+      background:#059669;border-radius:50px;color:#fff;font-weight:700;font-size:12px;text-decoration:none">
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="course-hero">
+  <div class="course-hero-inner">
+    <div class="course-badge"><i class="fas fa-fire-flame-curved"></i> NISM Certified Educator · Stock Pathshala</div>
+    <h1>Equity Derivatives Trading &amp; Planning</h1>
+    <p>A comprehensive 8-class practical course on futures, options, Greeks, volatility strategies,<br>hedging and professional risk management — taught in Bengali &amp; Hindi.</p>
+    <div class="course-meta-strip">
+      <div class="course-meta-item"><div class="val">8</div><div class="lbl">Classes</div></div>
+      <div class="course-meta-item"><div class="val">Intermediate</div><div class="lbl">to Advanced</div></div>
+      <div class="course-meta-item"><div class="val">Bengali</div><div class="lbl">&amp; Hindi</div></div>
+      <div class="course-meta-item"><div class="val">Live</div><div class="lbl">Online</div></div>
+    </div>
+    <div class="course-actions">
+      <button onclick="window.print()" class="btn-dl primary">
+        <i class="fas fa-file-pdf"></i> Download as PDF
+      </button>
+      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20Equity%20Derivatives%20Trading%20and%20Planning" target="_blank" class="btn-dl outline">
+        <i class="fab fa-whatsapp"></i> Enroll Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="course-body">
+
+  <!-- Quote -->
+  <div class="quote-box">
+    <p>"The derivatives market is not a casino — it's a precision instrument. Master it and it protects you; misuse it and it destroys you."</p>
+    <span>— Sagar Chowdhury, Stock Pathshala</span>
+  </div>
+
+  <!-- Class 1 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-1</div>
+      <div class="day-title">
+        <strong>Derivatives Basics</strong>
+        <span>Futures, Options, Forwards, Swaps · Participants &amp; Uses</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Forwards</strong>
+          <div class="sub-list">
+            <div class="sub-item">Customized private agreements between two parties to buy or sell an asset at an agreed price on a future date.</div>
+            <div class="sub-item">Generally over-the-counter (OTC) contracts — not traded on exchanges.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Futures</strong>
+          <div class="sub-list">
+            <div class="sub-item">Standardized exchange-traded contracts to buy or sell an asset at a predetermined price and future date.</div>
+            <div class="sub-item">Require margins and daily mark-to-market settlement, reducing counterparty risk.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Options</strong>
+          <div class="sub-list">
+            <div class="sub-item">Give buyers the right, but not obligation, to buy or sell an underlying asset at a specified price before expiry.</div>
+            <div class="sub-item">Buyers pay premiums; sellers assume obligations.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Swaps</strong>
+          <div class="sub-list">
+            <div class="sub-item">Agreements where two parties exchange specified cash flows according to predetermined terms.</div>
+            <div class="sub-item">Common examples: interest-rate and currency swaps — mainly used for managing financial risks.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>Market Participants &amp; Uses</strong> — hedgers, speculators, arbitrageurs and their role in derivatives markets.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 2 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-2</div>
+      <div class="day-title">
+        <strong>Capital Usage &amp; Advanced Trading</strong>
+        <span>Collateral · Option Chain · OI · IV · Volatility Strategies · Hedging</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>How to Use Capital in Derivatives Market</strong> — capital allocation principles and margin efficiency.</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>How Collateral Works in Derivatives</strong> — pledging shares, cash margins, SPAN and exposure margin explained.</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Option Chain</strong>
+          <div class="sub-list">
+            <div class="sub-item">A structured matrix layout displaying all available options strike prices, premiums, volume, and expiration dates for an underlying asset.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>OI (Open Interest)</strong>
+          <div class="sub-list">
+            <div class="sub-item">The total number of active derivative contracts that are currently open and have not been settled or closed.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>IV (Implied Volatility)</strong>
+          <div class="sub-list">
+            <div class="sub-item">The market's forward-looking estimate of price variability, directly driving the pricing of option premiums and risk premiums.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Volatility Strategies</strong>
+          <div class="sub-list">
+            <div class="sub-item">Trading frameworks like straddles or iron condors designed to profit strictly from changes in asset price fluctuations, regardless of direction.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Adjustments</strong>
+          <div class="sub-list">
+            <div class="sub-item">Defensive actions like rolling strikes or adding legs taken to manage risk and repair a losing options position.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Hedging</strong>
+          <div class="sub-list">
+            <div class="sub-item">Executing offsetting derivatives trades to shield a portfolio or position from catastrophic losses caused by adverse market moves.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 3 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-3</div>
+      <div class="day-title">
+        <strong>Options Fundamentals</strong>
+        <span>Call / Put · Buyer / Seller · Strike · Expiry · Premium</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>Call &amp; Put Options</strong> — detailed explanation of buyer and seller perspectives, rights vs obligations, and payoff profiles.</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Strike Price</strong>
+          <div class="sub-list">
+            <div class="sub-item">The predetermined fixed price at which an option holder can buy or sell the underlying asset upon contract exercise.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Expiry</strong>
+          <div class="sub-list">
+            <div class="sub-item">The exact final date and time when an options contract becomes void, invalid, and ceases to trade or exist.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Premium</strong>
+          <div class="sub-list">
+            <div class="sub-item">The upfront cash price paid by the buyer to the seller to purchase the rights of an options contract.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>Detailed Explanation of All Counterparts</strong> — how each element interacts in a live trade, with practical examples.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 4 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-4</div>
+      <div class="day-title">
+        <strong>Option Pricing</strong>
+        <span>Intrinsic &amp; Time Value · ITM / ATM / OTM · IV · Volatility</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Intrinsic Value &amp; Time Value</strong>
+          <div class="sub-list">
+            <div class="sub-item">Intrinsic value is an option's inherent worth if exercised immediately; time value is the premium reflecting remaining lifespan potential.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>ITM / ATM / OTM</strong>
+          <div class="sub-list">
+            <div class="sub-item">In-the-money options hold intrinsic value; at-the-money strikes equal the asset price; out-of-the-money options contain only time value.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>IV (Implied Volatility)</strong>
+          <div class="sub-list">
+            <div class="sub-item">A metric reflecting the market's forecast of future price fluctuations derived from current option prices and market demand.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Volatility</strong>
+          <div class="sub-list">
+            <div class="sub-item">A statistical measure tracking the frequency and magnitude of price movements for a specific asset over time.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 5 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-5</div>
+      <div class="day-title">
+        <strong>Option Greeks</strong>
+        <span>Delta · Gamma · Theta · Vega · Rho + Practical Interpretation</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>1. Delta</strong>
+          <div class="sub-list">
+            <div class="sub-item">Measures the expected change in an option's price for every one-dollar move in the underlying asset's price.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>2. Gamma</strong>
+          <div class="sub-list">
+            <div class="sub-item">Tracks the rate of change in Delta for each one-dollar movement in the underlying asset's price.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>3. Theta</strong>
+          <div class="sub-list">
+            <div class="sub-item">Represents the daily rate of time decay, showing how much value an option loses as expiration approaches.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>4. Vega</strong>
+          <div class="sub-list">
+            <div class="sub-item">Quantifies an option price's sensitivity to a one-percentage-point change in the underlying asset's implied volatility.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>5. Rho</strong>
+          <div class="sub-list">
+            <div class="sub-item">Measures the expected change in an option's value for every one-percentage-point shift in the risk-free interest rate.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text"><strong>Practical Interpretation</strong> — how to read and act on Greeks in live market conditions using option chain data.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 6 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-6</div>
+      <div class="day-title">
+        <strong>Futures Deep Dive</strong>
+        <span>Contract · Margin · MTM · Leverage · Payoff · Hedging</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Contract</strong>
+          <div class="sub-list">
+            <div class="sub-item">A legal agreement between two or more parties that defines the terms for trading an asset or financial instrument.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Margin</strong>
+          <div class="sub-list">
+            <div class="sub-item">The amount of money a trader deposits with a broker as collateral to open and maintain a leveraged position.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>MTM (Mark-to-Market)</strong>
+          <div class="sub-list">
+            <div class="sub-item">The daily process of measuring the fair value of an asset or portfolio based on current market prices.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Leverage</strong>
+          <div class="sub-list">
+            <div class="sub-item">Using borrowed money from a broker to increase the size of a trade and potential returns or losses.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Payoff</strong>
+          <div class="sub-list">
+            <div class="sub-item">The potential financial profit or loss outcome of an investment or derivative contract at expiration or settlement.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Hedging</strong>
+          <div class="sub-list">
+            <div class="sub-item">A risk management strategy where you take an offsetting position to reduce potential losses in another investment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 7 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-7</div>
+      <div class="day-title">
+        <strong>Trading Strategies</strong>
+        <span>Basic · Directional Spreads · Non-Directional</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Basic Strategies</strong>
+          <div class="sub-list">
+            <div class="sub-item">Long Call / Long Put — pure directional bets with defined risk.</div>
+            <div class="sub-item">Covered Call — generate income on existing stock holdings.</div>
+            <div class="sub-item">Protective Put — insurance strategy against downside in a long position.</div>
+            <div class="sub-item">Collar — combining a protective put and covered call to cap both risk and reward.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Directional Spreads</strong>
+          <div class="sub-list">
+            <div class="sub-item">Bull Call Spread / Bull Put Spread — low-cost strategies for moderate bullish views.</div>
+            <div class="sub-item">Bear Call Spread / Bear Put Spread — defined-risk strategies for bearish market outlook.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Non-Directional Strategies</strong>
+          <div class="sub-list">
+            <div class="sub-item">Straddle — buy both call and put at the same strike to profit from big moves in either direction.</div>
+            <div class="sub-item">Strangle — similar to straddle but uses OTM options for lower cost.</div>
+            <div class="sub-item">Iron Condor — sell an OTM strangle and buy a wider one; profits in range-bound markets.</div>
+            <div class="sub-item">Butterfly — three-strike strategy targeting a specific price at expiry.</div>
+            <div class="sub-item">Condor — four-strike spread for a wider profit range than butterfly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Class 8 -->
+  <div class="day-card">
+    <button class="day-header open" onclick="toggleDay(this)">
+      <div class="day-num">Day-8</div>
+      <div class="day-title">
+        <strong>Professional Framework</strong>
+        <span>Strategy Selection · Position Sizing · Risk Management · Backtesting</span>
+      </div>
+      <i class="fas fa-chevron-down day-chevron"></i>
+    </button>
+    <div class="day-body open">
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Strategy Selection</strong>
+          <div class="sub-list">
+            <div class="sub-item">The process of choosing a trading methodology based on market conditions, asset behavior, capital availability, and personal risk tolerance.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Position Sizing</strong>
+          <div class="sub-list">
+            <div class="sub-item">Calculating the precise amount of capital or number of contracts allocated to a trade to limit potential loss.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Risk Management</strong>
+          <div class="sub-list">
+            <div class="sub-item">Rules and actions used to protect capital, including stop-losses, diversification, and maximum drawdown limits across a portfolio.</div>
+          </div>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-dot"></div>
+        <div class="topic-text">
+          <strong>Backtesting</strong>
+          <div class="sub-list">
+            <div class="sub-item">Testing a trading strategy on historical market data to evaluate its viability, profitability, and risk profile before risking capital.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tools section -->
+  <div class="tools-section">
+    <h3 style="font-size:17px;font-weight:800;color:var(--text-primary);margin-bottom:4px">
+      <i class="fas fa-tools" style="color:#059669"></i> &nbsp;Platforms &amp; Tools Covered
+    </h3>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:0">All platforms taught hands-on during the course</p>
+    <div class="tools-grid">
+      <a href="https://www.nseindia.com" target="_blank" class="tool-chip"><i class="fas fa-building-columns" style="color:#059669"></i> NSE India</a>
+      <a href="https://www.tradingview.com" target="_blank" class="tool-chip"><i class="fas fa-chart-line" style="color:#2962ff"></i> TradingView</a>
+      <a href="https://opstra.definedge.com" target="_blank" class="tool-chip"><i class="fas fa-sliders" style="color:#8b5cf6"></i> Opstra</a>
+      <a href="https://sensibull.com" target="_blank" class="tool-chip"><i class="fas fa-bolt" style="color:#d97706"></i> Sensibull</a>
+      <a href="https://www.moneycontrol.com" target="_blank" class="tool-chip"><i class="fas fa-newspaper" style="color:#dc2626"></i> Moneycontrol</a>
+      <a href="https://chartink.com" target="_blank" class="tool-chip"><i class="fas fa-filter" style="color:#06b6d4"></i> ChartInk</a>
+      <a href="https://www.screener.in" target="_blank" class="tool-chip"><i class="fas fa-search-dollar" style="color:#059669"></i> Screener.in</a>
+      <div class="tool-chip"><i class="fas fa-robot" style="color:#6366f1"></i> AI Websites</div>
+    </div>
+  </div>
+
+  <!-- Enroll CTA -->
+  <div class="enroll-cta">
+    <h3>Ready to Master the Derivatives Market?</h3>
+    <p>Join Sagar Chowdhury's Equity Derivatives Trading &amp; Planning course and trade options &amp; futures with confidence.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20want%20to%20enroll%20in%20Equity%20Derivatives%20Trading%20and%20Planning"
+        target="_blank" class="btn-dl primary">
+        <i class="fab fa-whatsapp"></i> Enroll via WhatsApp
+      </a>
+      <button onclick="window.print()" class="btn-dl outline">
+        <i class="fas fa-file-pdf"></i> Download Syllabus PDF
+      </button>
+    </div>
+  </div>
+
+</div><!-- /course-body -->
+
+<script>
+function toggleDay(btn) {
+  btn.classList.toggle('open');
+  const body = btn.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

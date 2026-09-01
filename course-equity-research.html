@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Equity Investment Module | Stock Pathshala by Sagar</title>
 <meta name="description" content="Equity Research and Trading course syllabus — 10-day module covering portfolio management, fundamental analysis, balance sheet, cash flow, ratios and stock screening. Stock Pathshala by Sagar Chowdhury.">
-<link rel="canonical" href="https://stockpathshalabysagar.com/course-equity-research.html">
+<link rel="canonical" href="https://stockpathshalabysagar.com/course-equity-research">
 <link rel="icon" type="image/png" href="assets/stock-pathshala-logo.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,10 +83,11 @@ body { background: var(--bg-primary); }
 }
 .day-header:hover { background: var(--bg-secondary); }
 .day-num {
-  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  min-width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
   background: linear-gradient(135deg, #059669, #047857);
   display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 900; color: #fff; letter-spacing: 0.3px;
+  font-size: 12px; font-weight: 900; color: #fff; letter-spacing: 0.3px;
+  padding: 0 8px; white-space: nowrap;
 }
 .day-title { flex: 1; }
 .day-title strong { font-size: 15px; font-weight: 800; color: var(--text-primary); display: block; }
@@ -160,11 +161,6 @@ body { background: var(--bg-primary); }
     </div>
   </a>
   <div style="display:flex;gap:10px;align-items:center">
-    <a href="all-blogs" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
-      background:rgba(5,150,105,0.1);border:1.5px solid rgba(5,150,105,0.25);
-      border-radius:50px;color:#059669;font-weight:700;font-size:12px;text-decoration:none">
-      <i class="fas fa-newspaper"></i> Blogs
-    </a>
     <button onclick="window.print()" style="display:flex;align-items:center;gap:6px;padding:8px 16px;
       background:var(--green-soft,rgba(5,150,105,0.1));border:1.5px solid rgba(5,150,105,0.25);
       border-radius:50px;color:#059669;font-weight:700;font-size:12px;cursor:pointer">
@@ -228,7 +224,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 2 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-2</div>
       <div class="day-title">
         <strong>Importance & Basics of Stock Analysis</strong>
@@ -236,7 +232,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Stock Analysis First Principles</strong><span class="bengali">যে কোন Stock Analysis এর প্রথম শর্ত গুলো কী কী?</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Shareholding Analysis</strong><span class="bengali">Shareholding দেখে কী ভাবে Investment Decision নেব?</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Block Deals & Insider Trading</strong> — identifying signals from institutional activity</div></div>
@@ -246,7 +242,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 3 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-3</div>
       <div class="day-title">
         <strong>Two Types of Fundamental Approach</strong>
@@ -254,7 +250,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Top-Down vs Bottom-Up Approach</strong><span class="bengali">কোন পদ্ধতিতে যাওয়া উচিৎ একজন সাধারণ ইনভেস্টরের?</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Qualitative Analysis</strong> — Company details, management quality, moat<span class="bengali">স্টক Selection এর ক্ষেত্রে Top Down এবং Bottom Up Approach কে কী ভাবে কাজে লাগাতে হবে</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Target Sector & Company Selection</strong><span class="bengali">Target Sector and Target Company কী ভাবে Choice করবেন?</span></div></div>
@@ -264,7 +260,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 4 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-4</div>
       <div class="day-title">
         <strong>Quantitative Analysis & Result Analysis</strong>
@@ -272,7 +268,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Result Analysis</strong> — why and how to read quarterly results<span class="bengali">কোন Companyর রেজাল্ট Analysis করবো কেন?</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Profit & Loss Analysis</strong><span class="bengali">Target Company অর্থনৈতিক অবস্থা বর্তমানে কী রকম ও ভবিষ্যৎ এ কী রকম হতে পারে</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Key Metrics to Target</strong> — revenue growth, margins, EPS, EBITDA<span class="bengali">মূল কোন কোন বিষয় গুলো Target করতে হবে Analysis করার</span></div></div>
@@ -281,7 +277,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 5 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-5</div>
       <div class="day-title">
         <strong>Balance Sheet Analysis & Valuation</strong>
@@ -289,7 +285,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Balance Sheet Analysis</strong> — assets, liabilities, net worth<span class="bengali">Book Value কেন গুরুত্বপূর্ণ</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Valuation Methods</strong> — Peter Lynch approach, Reverse DCF</div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Concall Analysis</strong> — how to extract insights from earnings calls</div></div>
@@ -299,7 +295,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 6 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-6</div>
       <div class="day-title">
         <strong>Cash Flow Analysis & DCF</strong>
@@ -307,7 +303,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Why Cash Flow is Critical</strong><span class="bengali">কেন Cash Flow গুরুত্বপূর্ণ, কেন Cash Flow না থাকলে শেয়ার এর দাম কমে যাবে</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Cash Flow Signals</strong><span class="bengali">Cash Flow দেখে কোন বিষয় গুলো অনুমান করা যায়</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>DCF (Discounted Cash Flow)</strong> — practical application for stock valuation</div></div>
@@ -317,7 +313,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 7 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-7</div>
       <div class="day-title">
         <strong>Important Ratios & Their Use</strong>
@@ -325,7 +321,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Key Financial Ratios</strong> — PE, PB, ROE, ROCE, Debt/Equity, Current Ratio<span class="bengali">বিভিন্ন Ratio গুলোর গুরুত্ব কী, কেন তাদের দেখবো</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Sector-wise Important Ratios</strong><span class="bengali">কোন কোন Sector এর Key Ratio এবং Word কী কী</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Valuation Understanding</strong> — which ratios to use for which type of stock<span class="bengali">কোন কোন Ratios একটা Stock এর Valuation বোঝার জন্য ব্যবহার করব</span></div></div>
@@ -334,7 +330,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 8 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-8</div>
       <div class="day-title">
         <strong>Query Run — Stock Screeners</strong>
@@ -342,7 +338,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Stock Finding with Screener Queries</strong> — building custom filters</div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>ChartInk Queries</strong> for technical + fundamental combo screening</div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Sector Analysis</strong> using ChartInk — identifying sector rotations and leaders</div></div>
@@ -351,7 +347,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 9 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-9</div>
       <div class="day-title">
         <strong>Create a Portfolio — Equity & Mutual Fund</strong>
@@ -359,7 +355,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Building a Diversified Portfolio</strong><span class="bengali">Ultimate একটা Portfolio তৈরি করা, যেখানে Diversification সহ Assets Allocation করা থাকবে</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Live One-Pager Stock Analysis</strong> — selecting a stock and doing full analysis practically<span class="bengali">একটা Stock Selection থেকে একটা Stock Analysis করে One Pager Analysis এর পুরো বিষয় টি Practical ভাবে করে দেখানো</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Equity + Mutual Fund</strong> portfolio construction strategy</div></div>
@@ -368,7 +364,7 @@ body { background: var(--bg-primary); }
 
   <!-- Day 10 -->
   <div class="day-card">
-    <button class="day-header" onclick="toggleDay(this)">
+    <button class="day-header open" onclick="toggleDay(this)">
       <div class="day-num">Day-10</div>
       <div class="day-title">
         <strong>Course Summarization & Tools</strong>
@@ -376,7 +372,7 @@ body { background: var(--bg-primary); }
       </div>
       <i class="fas fa-chevron-down day-chevron"></i>
     </button>
-    <div class="day-body">
+    <div class="day-body open">
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Complete Course Recap</strong><span class="bengali">পুরো Course এ যে যে বিষয় গুলো আলোচনা হয়েছে তার একটা সারাংশ আলোচনা করা হবে</span></div></div>
       <div class="topic-item"><div class="topic-dot"></div><div class="topic-text"><strong>Use of Websites for Financial Analysis</strong> — live walkthrough of all platforms</div></div>
     </div>
