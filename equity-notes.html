@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equity Investment Module — Financial Notes | Stock Pathshala by Sagar</title>
+<meta name="description" content="Financial terminology notes from the Equity Investment Module by Sagar Chowdhury — Cash Flow, FCF, Working Capital, DCF. Available in English and Bengali.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/stock-pathshala-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Copy protection ── */
+* { -webkit-user-select:none!important; -moz-user-select:none!important; user-select:none!important; -webkit-touch-callout:none!important; }
+@media print { body { display:none!important; } }
+
+/* ── Nav ── */
+#mainNav { position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(5,150,105,0.15);padding:14px 0;box-shadow:0 1px 12px rgba(0,0,0,0.07); }
+.nav-inner { max-width:1200px;margin:auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px; }
+.nav-brand { display:flex;align-items:center;gap:10px;text-decoration:none; }
+.nav-brand-logo { width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(5,150,105,0.4);box-shadow:0 2px 8px rgba(5,150,105,0.2); }
+.nav-brand-name { font-size:19px;font-weight:900;line-height:1; }
+.nav-links { display:flex;align-items:center;gap:20px; }
+.nav-link { opacity:.75;transition:all .2s;font-size:14px;font-weight:500;text-decoration:none;color:var(--text-primary); }
+.nav-link:hover { opacity:1;color:#059669; }
+.nav-link.active { opacity:1;color:#059669!important;font-weight:700;border-bottom:2.5px solid #059669;padding-bottom:2px; }
+.nav-notes-pill { display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:50px;background:rgba(5,150,105,0.09);border:1.5px solid rgba(5,150,105,0.25);color:#059669;font-weight:700;font-size:13px;text-decoration:none; }
+@media(max-width:640px){ .hide-sm{display:none!important;} }
+
+/* ── Hero ── */
+.notes-hero { background:linear-gradient(135deg,#059669 0%,#047857 55%,#065f46 100%);padding:80px 24px 48px;color:#fff;text-align:center;position:relative;overflow:hidden;margin-top:69px; }
+.notes-hero::before { content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.notes-hero-inner { position:relative;z-index:1;max-width:800px;margin:0 auto; }
+.notes-badge { display:inline-flex;align-items:center;gap:7px;padding:6px 18px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:50px;font-size:12px;font-weight:700;color:#fff;margin-bottom:18px;letter-spacing:.5px; }
+.notes-hero h1 { font-family:'Playfair Display',serif;font-size:38px;font-weight:800;color:#fff;margin-bottom:12px;line-height:1.2; }
+.notes-hero p { font-size:15px;color:rgba(255,255,255,0.88);line-height:1.75;margin-bottom:28px; }
+.notes-source-pill { display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 22px;font-size:13px;color:rgba(255,255,255,0.9);font-weight:600; }
+
+/* ── Language toggle bar ── */
+.lang-bar { position:sticky;top:69px;z-index:900;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(5,150,105,0.15);box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap; }
+.lang-toggle-wrap { display:flex;background:rgba(5,150,105,0.08);border:1.5px solid rgba(5,150,105,0.2);border-radius:50px;padding:4px; }
+.lang-btn { padding:8px 24px;border-radius:50px;border:none;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;transition:all .25s;background:transparent;color:#3a5068; }
+.lang-btn.active { background:linear-gradient(135deg,#059669,#047857);color:#fff;box-shadow:0 3px 10px rgba(5,150,105,0.35); }
+.lang-btn:not(.active):hover { background:rgba(5,150,105,0.1);color:#059669; }
+.toc-label { font-size:12px;font-weight:700;color:#7a95b0;letter-spacing:.5px;text-transform:uppercase; }
+
+/* ── TOC chips ── */
+.toc-chips { display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:10px 24px 14px;background:rgba(5,150,105,0.03);border-bottom:1px solid rgba(5,150,105,0.1); }
+.toc-chip { padding:5px 14px;border-radius:50px;font-size:12px;font-weight:600;background:var(--bg-card);border:1px solid rgba(5,150,105,0.2);color:#059669;cursor:pointer;text-decoration:none;transition:all .2s; }
+.toc-chip:hover { background:#059669;color:#fff;box-shadow:0 3px 10px rgba(5,150,105,0.3); }
+
+/* ── Notes body ── */
+.notes-body { max-width:900px;margin:0 auto;padding:40px 24px 100px; }
+.progress-pill { display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.2);border-radius:50px;font-size:12px;font-weight:700;color:#059669;margin-bottom:20px; }
+
+/* ── Section accordion ── */
+.notes-section { background:var(--bg-card);border-radius:20px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 2px 16px rgba(0,0,0,0.06);margin-bottom:32px;overflow:hidden;scroll-margin-top:160px; }
+.section-header { display:flex;align-items:center;gap:14px;padding:22px 28px;cursor:pointer;border-bottom:1px solid rgba(5,150,105,0.1);background:linear-gradient(135deg,rgba(5,150,105,0.04),transparent);transition:background .2s; }
+.section-header:hover { background:linear-gradient(135deg,rgba(5,150,105,0.08),transparent); }
+.section-icon { width:44px;height:44px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;box-shadow:0 3px 10px rgba(5,150,105,0.3); }
+.section-title-wrap { flex:1; }
+.section-title { font-size:18px;font-weight:800;color:var(--text-primary);margin:0;line-height:1.3; }
+.section-subtitle { font-size:13px;color:#7a95b0;margin-top:2px;font-weight:500; }
+.section-arrow { width:32px;height:32px;border-radius:50%;background:rgba(5,150,105,0.1);display:flex;align-items:center;justify-content:center;color:#059669;transition:all .3s;flex-shrink:0; }
+.section-header.open .section-arrow { transform:rotate(180deg);background:rgba(5,150,105,0.2); }
+.section-body { padding:28px;display:none; }
+.section-body.open { display:block; }
+@media(max-width:640px){ .section-body{padding:20px 16px;} }
+
+/* ── Block: paragraph ── */
+.nb-p { font-size:15px;line-height:1.85;color:#3a5068;margin-bottom:12px; }
+.bn .nb-p { font-family:'Hind Siliguri',sans-serif;font-size:15.5px;line-height:2.0; }
+.nb-p:last-child { margin-bottom:0; }
+
+/* ── Block: h2 / h3 ── */
+.nb-h2 { font-size:17px;font-weight:800;color:#059669;margin:24px 0 10px;display:flex;align-items:center;gap:8px; }
+.nb-h2:first-child { margin-top:0; }
+.nb-h2::before { content:'';display:block;width:4px;height:18px;background:linear-gradient(#059669,#047857);border-radius:2px;flex-shrink:0; }
+.nb-h3 { font-size:15px;font-weight:700;color:var(--text-primary);margin:16px 0 8px; }
+
+/* ── Block: callout ── */
+.nb-callout { border-radius:12px;padding:16px 20px;margin:14px 0;border-left:4px solid; }
+.nb-callout.green  { background:rgba(5,150,105,0.07); border-color:#059669; }
+.nb-callout.red    { background:rgba(220,38,38,0.06);  border-color:#dc2626; }
+.nb-callout.gold   { background:rgba(217,119,6,0.07);  border-color:#d97706; }
+.nb-callout.blue   { background:rgba(59,130,246,0.07); border-color:#3b82f6; }
+.nb-callout-label  { font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px; }
+.nb-callout.green .nb-callout-label { color:#059669; }
+.nb-callout.red   .nb-callout-label { color:#dc2626; }
+.nb-callout.gold  .nb-callout-label { color:#d97706; }
+.nb-callout.blue  .nb-callout-label { color:#3b82f6; }
+.nb-callout p { font-size:14.5px;line-height:1.8;margin:0; }
+.bn .nb-callout p { font-family:'Hind Siliguri',sans-serif;font-size:15px;line-height:1.95; }
+
+/* ── Block: formula ── */
+.nb-formula { background:rgba(5,150,105,0.06);border:1.5px solid rgba(5,150,105,0.2);border-radius:12px;padding:16px 24px;margin:14px 0;text-align:center;font-size:19px;font-weight:800;color:#059669; }
+
+/* ── Block: steps ── */
+.nb-steps { list-style:none;margin:12px 0; }
+.nb-steps li { display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(5,150,105,0.08); }
+.nb-steps li:last-child { border-bottom:none;padding-bottom:0; }
+.nb-step-num { min-width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(5,150,105,0.3); }
+.nb-step-text { font-size:14.5px;line-height:1.8;color:#3a5068;padding-top:4px; }
+.bn .nb-step-text { font-family:'Hind Siliguri',sans-serif;font-size:15px;line-height:2.0; }
+
+/* ── Block: 2col ── */
+.nb-2col { display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0; }
+.nb-col-card { border-radius:12px;padding:16px;border:1.5px solid; }
+.nb-col-card.left  { background:rgba(217,119,6,0.06);border-color:rgba(217,119,6,0.3); }
+.nb-col-card.right { background:rgba(220,38,38,0.06);border-color:rgba(220,38,38,0.3); }
+.nb-col-head { font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px; }
+.nb-col-card.left  .nb-col-head { color:#d97706; }
+.nb-col-card.right .nb-col-head { color:#dc2626; }
+.nb-col-card ul { list-style:none;padding:0;margin:0; }
+.nb-col-card ul li { font-size:13.5px;line-height:1.75;color:#3a5068;padding:3px 0; }
+.nb-col-card ul li::before { content:'• ';color:#059669;font-weight:700; }
+.bn .nb-col-card ul li { font-family:'Hind Siliguri',sans-serif;font-size:14px;line-height:1.9; }
+@media(max-width:640px){ .nb-2col{grid-template-columns:1fr;} }
+
+/* ── Block: cards ── */
+.nb-cards { display:grid;gap:14px;margin:14px 0; }
+.nb-cards.cols-2 { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+.nb-cards.cols-3 { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+
+/* scenario */
+.nb-card-scenario { border-radius:14px;padding:18px;border:1.5px solid; }
+.nb-card-scenario.ideal    { background:rgba(5,150,105,0.06);border-color:rgba(5,150,105,0.25); }
+.nb-card-scenario.trap     { background:rgba(220,38,38,0.06);border-color:rgba(220,38,38,0.25); }
+.nb-card-scenario.distress { background:rgba(217,119,6,0.06);border-color:rgba(217,119,6,0.25); }
+.nb-card-sc-title { font-size:13px;font-weight:800;margin-bottom:8px; }
+.nb-card-scenario.ideal    .nb-card-sc-title { color:#059669; }
+.nb-card-scenario.trap     .nb-card-sc-title { color:#dc2626; }
+.nb-card-scenario.distress .nb-card-sc-title { color:#d97706; }
+.nb-card-scenario p { font-size:13.5px;line-height:1.75;color:#3a5068;margin:0; }
+.bn .nb-card-scenario p { font-family:'Hind Siliguri',sans-serif;font-size:14px;line-height:1.9; }
+
+/* signal */
+.nb-card-signal { border-radius:14px;padding:20px;border:1.5px solid; }
+.nb-card-signal.pos { background:rgba(5,150,105,0.07); border-color:rgba(5,150,105,0.3); }
+.nb-card-signal.neg { background:rgba(220,38,38,0.07); border-color:rgba(220,38,38,0.3); }
+.nb-card-signal-head { font-size:15px;font-weight:800;margin-bottom:8px; }
+.nb-card-signal.pos .nb-card-signal-head { color:#059669; }
+.nb-card-signal.neg .nb-card-signal-head { color:#dc2626; }
+.nb-card-signal p { font-size:13.5px;line-height:1.75;color:#3a5068;margin:0; }
+.bn .nb-card-signal p { font-family:'Hind Siliguri',sans-serif;font-size:14px;line-height:1.9; }
+
+/* summary */
+.nb-card-summary { border-radius:14px;padding:18px 20px;border:1.5px solid; }
+.nb-card-summary.op  { background:rgba(5,150,105,0.07);  border-color:rgba(5,150,105,0.25); }
+.nb-card-summary.inv { background:rgba(217,119,6,0.07);  border-color:rgba(217,119,6,0.25); }
+.nb-card-summary.fin { background:rgba(59,130,246,0.07); border-color:rgba(59,130,246,0.25); }
+.nb-card-sum-label { font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px; }
+.nb-card-summary.op  .nb-card-sum-label { color:#059669; }
+.nb-card-summary.inv .nb-card-sum-label { color:#d97706; }
+.nb-card-summary.fin .nb-card-sum-label { color:#3b82f6; }
+.nb-card-sum-val { font-size:14px;font-weight:700;color:var(--text-primary);line-height:1.6; }
+.bn .nb-card-sum-val { font-family:'Hind Siliguri',sans-serif;font-size:14.5px; }
+
+/* compare */
+.nb-card-compare { border-radius:12px;padding:16px;border:1.5px solid; }
+.nb-card-compare.profit   { background:rgba(217,119,6,0.06);border-color:rgba(217,119,6,0.3); }
+.nb-card-compare.cashflow { background:rgba(220,38,38,0.06);border-color:rgba(220,38,38,0.3); }
+.nb-card-compare-head { font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px; }
+.nb-card-compare.profit   .nb-card-compare-head { color:#d97706; }
+.nb-card-compare.cashflow .nb-card-compare-head { color:#dc2626; }
+.nb-card-compare p { font-size:13.5px;line-height:1.75;color:#3a5068;margin:0; }
+.bn .nb-card-compare p { font-family:'Hind Siliguri',sans-serif;font-size:14px;line-height:1.9; }
+
+/* sector */
+.nb-card-sector { border-radius:14px;padding:18px; }
+.nb-card-sector.pos { background:rgba(5,150,105,0.07); border:1.5px solid rgba(5,150,105,0.25); }
+.nb-card-sector.neg { background:rgba(220,38,38,0.06); border:1.5px solid rgba(220,38,38,0.2); }
+.nb-card-sect-head { font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px; }
+.nb-card-sector.pos .nb-card-sect-head { color:#059669; }
+.nb-card-sector.neg .nb-card-sect-head { color:#dc2626; }
+.nb-sector-tag { display:inline-block;margin:3px;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700; }
+.nb-card-sector.pos .nb-sector-tag { background:rgba(5,150,105,0.12);color:#047857; }
+.nb-card-sector.neg .nb-sector-tag { background:rgba(220,38,38,0.1); color:#b91c1c; }
+.nb-card-sector p { font-size:13px;margin-top:10px;color:#3a5068;margin-bottom:0; }
+.bn .nb-card-sector p { font-family:'Hind Siliguri',sans-serif; }
+
+/* dcf */
+.nb-card-dcf { border-radius:14px;padding:18px 20px;border:1.5px solid; }
+.nb-card-dcf.perpetuity { background:rgba(5,150,105,0.07); border-color:rgba(5,150,105,0.25); }
+.nb-card-dcf.exit       { background:rgba(59,130,246,0.07); border-color:rgba(59,130,246,0.2); }
+.nb-card-dcf-head { font-size:14px;font-weight:800;margin-bottom:10px; }
+.nb-card-dcf.perpetuity .nb-card-dcf-head { color:#059669; }
+.nb-card-dcf.exit       .nb-card-dcf-head { color:#3b82f6; }
+.nb-card-dcf p { font-size:14px;line-height:1.8;color:#3a5068;margin:0; }
+.bn .nb-card-dcf p { font-family:'Hind Siliguri',sans-serif;font-size:14.5px;line-height:2.0; }
+
+/* ── Block: powers ── */
+.nb-powers { display:grid;gap:10px;margin:14px 0; }
+.nb-power-item { display:flex;align-items:flex-start;gap:12px;background:rgba(5,150,105,0.05);border-radius:10px;padding:14px 16px;border:1px solid rgba(5,150,105,0.15); }
+.nb-power-emoji { font-size:20px;flex-shrink:0;margin-top:1px; }
+.nb-power-text { font-size:14.5px;line-height:1.75;color:#3a5068; }
+.nb-power-title { font-weight:700;color:var(--text-primary); }
+.bn .nb-power-text { font-family:'Hind Siliguri',sans-serif;font-size:15px;line-height:1.95; }
+
+/* ── Block: example ── */
+.nb-example { border-radius:16px;overflow:hidden;margin:14px 0;border:1.5px solid rgba(5,150,105,0.2);box-shadow:0 3px 14px rgba(5,150,105,0.08); }
+.nb-example-head { padding:14px 20px;display:flex;align-items:center;gap:12px; }
+.nb-example.good .nb-example-head { background:linear-gradient(135deg,rgba(5,150,105,0.1),rgba(5,150,105,0.04)); }
+.nb-example.bad  .nb-example-head { background:linear-gradient(135deg,rgba(220,38,38,0.08),rgba(220,38,38,0.02)); }
+.nb-example-icon { font-size:26px; }
+.nb-example-title { font-size:15px;font-weight:800; }
+.nb-example.good .nb-example-title { color:#059669; }
+.nb-example.bad  .nb-example-title { color:#dc2626; }
+.nb-example-badge { margin-left:auto;font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px; }
+.nb-example.good .nb-example-badge { background:rgba(5,150,105,0.15); color:#059669; }
+.nb-example.bad  .nb-example-badge { background:rgba(220,38,38,0.12); color:#dc2626; }
+.nb-example-body { padding:16px 20px; }
+.nb-example-body p { font-size:14px;line-height:1.8;color:#3a5068;margin-bottom:8px; }
+.nb-example-body p:last-child { margin-bottom:0; }
+.bn .nb-example-body p { font-family:'Hind Siliguri',sans-serif;font-size:14.5px;line-height:2.0; }
+
+/* ── Block: warning ── */
+.nb-warning { background:rgba(217,119,6,0.08);border:1.5px solid rgba(217,119,6,0.3);border-radius:12px;padding:16px 20px;margin:14px 0;display:flex;gap:12px;align-items:flex-start; }
+.nb-warning-icon { font-size:22px;flex-shrink:0; }
+.nb-warning p { font-size:14px;line-height:1.8;color:#3a5068;margin:0; }
+.bn .nb-warning p { font-family:'Hind Siliguri',sans-serif;font-size:14.5px;line-height:2.0; }
+
+/* ── Block: table ── */
+.nb-table-wrap { overflow-x:auto;margin:14px 0; }
+.nb-table { width:100%;border-collapse:collapse;font-size:13.5px; }
+.nb-table th { background:linear-gradient(135deg,#059669,#047857);color:#fff;padding:11px 14px;text-align:left;font-weight:700;font-size:12px;letter-spacing:.3px; }
+.nb-table th:first-child { border-radius:10px 0 0 0; }
+.nb-table th:last-child  { border-radius:0 10px 0 0; }
+.nb-table td { padding:11px 14px;border-bottom:1px solid rgba(5,150,105,0.1);vertical-align:top;color:#3a5068;line-height:1.65; }
+.nb-table tr:last-child td { border-bottom:none; }
+.nb-table tr:nth-child(even) td { background:rgba(5,150,105,0.03); }
+.nb-table tr:hover td { background:rgba(5,150,105,0.06); }
+@media(max-width:640px){ .nb-table{font-size:12px;} .nb-table th,.nb-table td{padding:8px 10px;} }
+.badge-pos { display:inline-block;padding:2px 10px;border-radius:50px;font-size:11px;font-weight:700;background:rgba(5,150,105,0.12);color:#059669; }
+.badge-neg { display:inline-block;padding:2px 10px;border-radius:50px;font-size:11px;font-weight:700;background:rgba(220,38,38,0.1); color:#dc2626; }
+
+/* ── Block: Q&A ── */
+.nb-qa { margin:16px 0; }
+.nb-qa-question { background:rgba(5,150,105,0.06);border:1.5px solid rgba(5,150,105,0.2);border-radius:12px 12px 0 0;padding:14px 20px;font-size:15px;font-weight:700;color:#059669;display:flex;align-items:flex-start;gap:10px; }
+.nb-qa-q-icon { font-size:18px;margin-top:1px;flex-shrink:0; }
+.bn .nb-qa-question { font-family:'Hind Siliguri',sans-serif; }
+.nb-qa-answer { background:var(--bg-card);border:1.5px solid rgba(5,150,105,0.15);border-top:none;border-radius:0 0 12px 12px;padding:18px 20px; }
+.nb-qa-answer p { font-size:14.5px;line-height:1.85;color:#3a5068;margin:0; }
+.bn .nb-qa-answer p { font-family:'Hind Siliguri',sans-serif;font-size:15px;line-height:2.0; }
+
+/* ── Footer card ── */
+.notes-footer-card { background:linear-gradient(135deg,rgba(5,150,105,0.06),rgba(5,150,105,0.02));border:1.5px solid rgba(5,150,105,0.2);border-radius:20px;padding:32px;text-align:center;margin-top:40px; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="index" class="nav-brand">
+      <img src="assets/stock-pathshala-logo.png" alt="Stock Pathshala" class="nav-brand-logo" onerror="this.style.display='none'">
+      <div class="nav-brand-name">
+        <span style="color:#059669">Stock</span><span style="color:#dc2626">Pathshala</span>
+        <span style="font-size:10px;font-weight:700;color:#7a95b0;margin-left:6px;vertical-align:middle;background:rgba(5,150,105,0.08);border:1px solid rgba(5,150,105,0.2);padding:2px 7px;border-radius:20px;font-style:italic"><span style="color:#059669">by</span> <span style="color:#dc2626">Sagar</span></span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index"                  class="nav-link hide-sm">Home</a>
+      <a href="about"                  class="nav-link hide-sm">About</a>
+      <a href="course-equity-research" class="nav-link hide-sm">Course</a>
+      <a href="equity-notes"           class="nav-notes-pill active">📚 Notes</a>
+      <a href="tel:+918436090949" style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:50px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-size:13px;font-weight:700;text-decoration:none">
+        <i class="fas fa-phone"></i> Call
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO (rendered by JS from NOTES_DATA.meta) ══ -->
+<div class="notes-hero" id="hero"></div>
+
+<!-- ══ LANGUAGE TOGGLE + TOC (rendered by JS) ══ -->
+<div class="lang-bar">
+  <span class="toc-label">Language:</span>
+  <div class="lang-toggle-wrap">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+    <button class="lang-btn"        id="btn-bn" onclick="setLang('bn')">🇮🇳 বাংলা</button>
+  </div>
+</div>
+<div class="toc-chips" id="toc"></div>
+
+<!-- ══ MAIN CONTENT MOUNT POINT ══ -->
+<div class="notes-body">
+  <div class="progress-pill" id="progress-pill"></div>
+  <div id="sections-mount"></div>
+
+  <!-- Footer card -->
+  <div class="notes-footer-card">
+    <div style="font-size:28px;margin-bottom:12px">📚</div>
+    <h3 style="font-size:18px;font-weight:800;color:var(--text-primary);margin-bottom:8px">These notes are for enrolled students of Stock Pathshala</h3>
+    <p style="font-size:14px;color:#7a95b0;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto">For questions, doubt-clearing, or to join the next batch, reach out directly to Sagar.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/918436090949?text=Hi%20Sagar%2C%20I%20have%20a%20doubt%20from%20the%20Equity%20Notes" target="_blank"
+        style="display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:50px;background:linear-gradient(135deg,#25d366,#1ebe5d);color:#fff;font-weight:700;font-size:14px;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,0.35)">
+        <i class="fab fa-whatsapp"></i> Ask a Doubt on WhatsApp
+      </a>
+      <a href="course-equity-research"
+        style="display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:50px;border:1.5px solid rgba(5,150,105,0.4);color:#059669;font-weight:700;font-size:14px;text-decoration:none;background:rgba(5,150,105,0.06)">
+        <i class="fas fa-graduation-cap"></i> View Full Course
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer style="background:var(--bg-card);border-top:1px solid rgba(5,150,105,0.12);padding:28px 24px;text-align:center">
+  <div style="max-width:900px;margin:auto">
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:10px">
+      <img src="assets/stock-pathshala-logo.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover" onerror="this.style.display='none'">
+      <span style="font-size:15px;font-weight:800"><span style="color:#059669">Stock</span><span style="color:#dc2626">Pathshala</span></span>
+      <span style="font-size:12px;color:#7a95b0">by Sagar Chowdhury</span>
+    </div>
+    <p style="font-size:13px;color:#7a95b0;margin:0">© 2024 Stock Pathshala. All content is proprietary and for enrolled students only. Unauthorised reproduction is strictly prohibited.</p>
+  </div>
+</footer>
+
+<!-- ══ DATA + RENDERER ══ -->
+<script src="notes-data.js"></script>
+<script>
+/* ════════════════════════════════════════════════════════
+   COPY PROTECTION
+════════════════════════════════════════════════════════ */
+(function(){
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart',   e => e.preventDefault());
+  document.addEventListener('copy',  e => { e.preventDefault(); e.clipboardData?.setData('text/plain',''); });
+  document.addEventListener('cut',   e =>   e.preventDefault());
+  document.addEventListener('keydown', e => {
+    const k = e.key.toLowerCase(), ctrl = e.ctrlKey || e.metaKey;
+    if(ctrl && 'cxaspuv'.includes(k))          { e.preventDefault(); return false; }
+    if(e.key==='F12')                           { e.preventDefault(); return false; }
+    if(ctrl && e.shiftKey && 'ijck'.includes(k)){ e.preventDefault(); return false; }
+  });
+  document.addEventListener('mousedown', e => { if(e.detail >= 2) e.preventDefault(); });
+  window.addEventListener('beforeprint', () => {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;font-size:20px;color:#059669;font-weight:700">🔒 Printing is not allowed for this content.</div>';
+  });
+  const check = () => {
+    const open = window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160;
+    document.body.style.filter = open ? 'blur(8px)' : '';
+  };
+  setInterval(check, 1200);
+  window.addEventListener('resize', check);
+})();
+
+/* ════════════════════════════════════════════════════════
+   RENDERER
+════════════════════════════════════════════════════════ */
+let currentLang = 'en';
+
+/* ── Block renderers ── */
+const R = {
+  p(b)       { return `<p class="nb-p">${b.text}</p>`; },
+
+  h2(b)      { return `<div class="nb-h2">${b.text}</div>`; },
+  h3(b)      { return `<div class="nb-h3">${b.text}</div>`; },
+
+  callout(b) {
+    return `<div class="nb-callout ${b.variant}">
+      <div class="nb-callout-label">${b.label}</div>
+      <p>${b.text}</p>
+    </div>`;
+  },
+
+  formula(b) { return `<div class="nb-formula">${b.text}</div>`; },
+
+  steps(b) {
+    const items = b.items.map((it, i) =>
+      `<li>
+        <div class="nb-step-num">${i + 1}</div>
+        <div class="nb-step-text"><strong>${it.title}</strong><br>${it.text}</div>
+      </li>`).join('');
+    return `<ul class="nb-steps">${items}</ul>`;
+  },
+
+  '2col'(b) {
+    const col = (c, side) => `
+      <div class="nb-col-card ${side}">
+        <div class="nb-col-head">${c.head}</div>
+        <ul>${c.items.map(i => `<li>${i}</li>`).join('')}</ul>
+      </div>`;
+    return `<div class="nb-2col">${col(b.left,'left')}${col(b.right,'right')}</div>`;
+  },
+
+  cards(b) {
+    const v = b.variant;
+    const cols = (v === 'signal' || v === 'compare' || v === 'dcf') ? 'cols-2' : 'cols-3';
+
+    const cardHtml = b.items.map(it => {
+      if (v === 'scenario') return `
+        <div class="nb-card-scenario ${it.variant}">
+          <div class="nb-card-sc-title">${it.title}</div>
+          <p>${it.text}</p>
+        </div>`;
+
+      if (v === 'signal') return `
+        <div class="nb-card-signal ${it.variant}">
+          <div class="nb-card-signal-head">${it.title}</div>
+          <p>${it.text}</p>
+        </div>`;
+
+      if (v === 'summary') return `
+        <div class="nb-card-summary ${it.variant}">
+          <div class="nb-card-sum-label">${it.title}</div>
+          <div class="nb-card-sum-val">${it.text}</div>
+        </div>`;
+
+      if (v === 'compare') return `
+        <div class="nb-card-compare ${it.variant}">
+          <div class="nb-card-compare-head">${it.title}</div>
+          <p>${it.text}</p>
+        </div>`;
+
+      if (v === 'sector') {
+        const tags = (it.tags || []).map(t => `<span class="nb-sector-tag">${t}</span>`).join('');
+        return `
+          <div class="nb-card-sector ${it.variant}">
+            <div class="nb-card-sect-head">${it.title}</div>
+            ${tags}
+            <p>${it.text}</p>
+          </div>`;
+      }
+
+      if (v === 'dcf') return `
+        <div class="nb-card-dcf ${it.variant}">
+          <div class="nb-card-dcf-head">${it.title}</div>
+          <p>${it.text}</p>
+        </div>`;
+
+      return '';
+    }).join('');
+
+    return `<div class="nb-cards ${cols}">${cardHtml}</div>`;
+  },
+
+  powers(b) {
+    const items = b.items.map(it => `
+      <div class="nb-power-item">
+        <div class="nb-power-emoji">${it.emoji}</div>
+        <div class="nb-power-text"><span class="nb-power-title">${it.title}</span> — ${it.text}</div>
+      </div>`).join('');
+    return `<div class="nb-powers">${items}</div>`;
+  },
+
+  example(b) {
+    const icon  = b.variant === 'good' ? '🟢' : '🔴';
+    const paras = b.body.map(p => `<p>${p}</p>`).join('');
+    return `
+      <div class="nb-example ${b.variant}">
+        <div class="nb-example-head">
+          <div class="nb-example-icon">${icon}</div>
+          <div class="nb-example-title">${b.title}</div>
+          <div class="nb-example-badge">${b.badge}</div>
+        </div>
+        <div class="nb-example-body">${paras}</div>
+      </div>`;
+  },
+
+  warning(b) {
+    return `<div class="nb-warning">
+      <div class="nb-warning-icon">⚠️</div>
+      <p>${b.text}</p>
+    </div>`;
+  },
+
+  table(b) {
+    const ths  = b.head.map(h => `<th>${h}</th>`).join('');
+    const rows = b.rows.map(row =>
+      `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`
+    ).join('');
+    return `<div class="nb-table-wrap"><table class="nb-table"><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  },
+
+  qa(b) {
+    return `<div class="nb-qa">
+      <div class="nb-qa-question"><div class="nb-qa-q-icon">❓</div><span>${b.question}</span></div>
+      <div class="nb-qa-answer"><p>${b.answer}</p></div>
+    </div>`;
+  }
+};
+
+function renderBlocks(blocks, lang) {
+  return blocks.map(b => {
+    const fn = R[b.type];
+    return fn ? fn(b) : '';
+  }).join('');
+}
+
+/* ── Render hero from meta ── */
+function renderHero() {
+  const m = NOTES_DATA.meta;
+  document.getElementById('hero').innerHTML = `
+    <div class="notes-hero-inner">
+      <div class="notes-badge"><i class="fas fa-book-open"></i> ${m.badge}</div>
+      <h1>${m.title}</h1>
+      <p>${m.subtitle}</p>
+      <div class="notes-source-pill">
+        <i class="fas fa-link" style="color:rgba(255,255,255,0.7)"></i>
+        ${m.source}
+      </div>
+    </div>`;
+}
+
+/* ── Render TOC chips ── */
+function renderTOC() {
+  const chips = NOTES_DATA.topics.map(t =>
+    `<a href="#sec-${t.id}" class="toc-chip">${t.icon} ${t.title.en}</a>`
+  ).join('');
+  document.getElementById('toc').innerHTML = chips;
+
+  // wire smooth scroll + auto-open
+  document.querySelectorAll('.toc-chip').forEach(chip => {
+    chip.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(chip.getAttribute('href'));
+      if (!target) return;
+      const body   = target.querySelector('.section-body');
+      const header = target.querySelector('.section-header');
+      if (body && !body.classList.contains('open')) {
+        body.classList.add('open');
+        header.classList.add('open');
+        body.style.display = 'block';
+      }
+      setTimeout(() => {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 170;
+        window.scrollTo({ top, behavior:'smooth' });
+      }, 50);
+    });
+  });
+}
+
+/* ── Render all topic sections ── */
+function renderSections(lang) {
+  const mount = document.getElementById('sections-mount');
+  mount.innerHTML = '';
+
+  NOTES_DATA.topics.forEach((topic, i) => {
+    const isFirst   = i === 0;
+    const blocks    = topic.blocks[lang] || topic.blocks.en;
+    const titleText = topic.title[lang]    || topic.title.en;
+    const subText   = topic.subtitle[lang] || topic.subtitle.en;
+
+    const section = document.createElement('div');
+    section.className = 'notes-section';
+    section.id = `sec-${topic.id}`;
+
+    section.innerHTML = `
+      <div class="section-header${isFirst ? ' open' : ''}" onclick="toggleSection(this)">
+        <div class="section-icon">${topic.icon}</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title">${titleText}</h2>
+          <div class="section-subtitle">${subText}</div>
+        </div>
+        <div class="section-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="section-body${isFirst ? ' open' : ''}" style="display:${isFirst ? 'block' : 'none'}">
+        <div class="${lang === 'bn' ? 'bn' : ''}">${renderBlocks(blocks, lang)}</div>
+      </div>`;
+
+    mount.appendChild(section);
+  });
+
+  // update progress pill
+  document.getElementById('progress-pill').innerHTML =
+    `<i class="fas fa-graduation-cap"></i> ${NOTES_DATA.topics.length} Topics · Tap any section to expand`;
+}
+
+/* ── Accordion toggle ── */
+function toggleSection(header) {
+  const body  = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  header.classList.toggle('open', !isOpen);
+  body.style.display = !isOpen ? 'block' : 'none';
+}
+
+/* ── Language switch ── */
+function setLang(lang) {
+  currentLang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-bn').classList.toggle('active', lang === 'bn');
+  // Re-render sections in new language (preserves open/closed state)
+  const openIds = [...document.querySelectorAll('.section-body.open')]
+    .map(b => b.closest('.notes-section')?.id);
+  renderSections(lang);
+  // Re-open previously open sections
+  openIds.forEach(id => {
+    const sec = document.getElementById(id);
+    if (!sec) return;
+    const body   = sec.querySelector('.section-body');
+    const header = sec.querySelector('.section-header');
+    body.classList.add('open');
+    header.classList.add('open');
+    body.style.display = 'block';
+  });
+  try { localStorage.setItem('sp-notes-lang', lang); } catch(e){}
+}
+
+/* ── Boot ── */
+(function init() {
+  renderHero();
+  renderTOC();
+  const saved = (() => { try { return localStorage.getItem('sp-notes-lang') || 'en'; } catch(e){ return 'en'; } })();
+  currentLang = saved;
+  document.getElementById(`btn-${saved}`).classList.add('active');
+  document.getElementById(`btn-${saved === 'en' ? 'bn' : 'en'}`).classList.remove('active');
+  renderSections(saved);
+})();
+</script>
+</body>
+</html>
