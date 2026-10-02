@@ -180,15 +180,9 @@
     <div style="display:flex;gap:28px;align-items:center">
       <a href="index" class="nav-link active" style="font-weight:700;font-size:14px">Home</a>
       <a href="about" class="nav-link" style="font-weight:500;font-size:14px">About</a>
-
       <a href="#classes" class="nav-link" style="font-weight:500;font-size:14px">Classes</a>
       <a href="#contact" class="nav-link" style="font-weight:500;font-size:14px">Contact</a>
-      <a href="equity-notes" class="nav-link" style="font-weight:600;font-size:14px;
-        display:inline-flex;align-items:center;gap:5px;
-        padding:5px 13px;border-radius:50px;
-        background:rgba(5,150,105,0.09);border:1.5px solid rgba(5,150,105,0.25);color:#059669">
-        📚 Notes
-      </a>
+      <a href="equity-notes" class="nav-link nav-notes-pill">📚 Notes</a>
       <a href="tel:+918436090949" class="btn primary" style="padding:9px 20px;font-size:13px">
         <i class="fas fa-phone"></i> 8436090949
       </a>
@@ -390,7 +384,7 @@
       padding-top:28px;border-top:1px solid rgba(255,255,255,0.07)">
       <a href="tel:+918436090949" style="display:flex;align-items:center;gap:8px;
         color:var(--text-secondary);font-size:14px">
-        <i class="fas fa-phone" style="color:var(--green)"></i> <span id="hero-phone"></span>
+        <i class="fas fa-phone" style="color:var(--green)"></i> <span>Call</span> <span id="hero-phone"></span>
       </a>
       <a href="https://www.linkedin.com/in/sagar-chowdhury-507744264/" target="_blank"
         style="display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:14px">
@@ -1305,21 +1299,71 @@
     </div>
   </div>
 
-  <!-- Bottom bar -->
-  <div style="background:var(--bg-secondary);padding:18px 24px;
-    border-top:1px solid rgba(0,0,0,0.06)">
-    <div style="max-width:1200px;margin:auto;
-      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
-      <p style="font-size:13px;color:var(--text-muted)">
-        © 2026 <strong style="color:var(--text-primary)">Sagar Chowdhury</strong>
-        · Stock Pathshala · All rights reserved
-      </p>
-      <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted)">
-        <i class="fas fa-certificate" style="color:var(--green)"></i>
-        NISM Series XV Certified &nbsp;·&nbsp;
-        <i class="fas fa-heart" style="color:var(--red)"></i>
-        Made with passion for financial literacy
+  <!-- Copyright bottom bar -->
+  <div style="background:linear-gradient(135deg,#041f0f 0%,#064e3b 100%);padding:28px 24px;
+    border-top:2px solid rgba(5,150,105,0.3)">
+    <div style="max-width:1200px;margin:auto">
+
+      <!-- Top row: logo + links -->
+      <div style="display:flex;align-items:center;justify-content:space-between;
+        flex-wrap:wrap;gap:16px;padding-bottom:18px;
+        border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:18px">
+
+        <!-- Brand -->
+        <div style="display:flex;align-items:center;gap:10px">
+          <img src="assets/stock-pathshala-logo.png"
+            style="width:34px;height:34px;border-radius:50%;object-fit:cover;
+              border:1.5px solid rgba(5,150,105,0.5)"
+            onerror="this.style.display='none'">
+          <div>
+            <span style="font-size:16px;font-weight:900;color:#4ade80">Stock</span><span style="font-size:16px;font-weight:900;color:#fca5a5">Pathshala</span>
+            <span style="display:block;font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px">by Sagar Chowdhury · স্টক পাঠশালা</span>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+          <a href="index"                  style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Home</a>
+          <a href="about"                  style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">About</a>
+          <a href="course-equity-research" style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Equity Research</a>
+          <a href="course-equity-derivatives" style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Equity Derivatives</a>
+          <a href="equity-notes"           style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">📚 Notes</a>
+          <a href="#contact"               style="font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact</a>
+        </div>
       </div>
+
+      <!-- Bottom row: copyright + badges -->
+      <div style="display:flex;align-items:center;justify-content:space-between;
+        flex-wrap:wrap;gap:12px">
+
+        <!-- Copyright -->
+        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6;margin:0">
+          &copy; 2026 <strong style="color:rgba(255,255,255,0.75)">Sagar Chowdhury</strong>
+          &nbsp;·&nbsp; Stock Pathshala by Sagar Chowdhury
+          &nbsp;·&nbsp; All rights reserved.<br>
+          <span style="font-size:11px">Unauthorised reproduction or distribution of any content from this website is strictly prohibited.</span>
+        </p>
+
+        <!-- Credential badges -->
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+            color:#4ade80;padding:4px 10px;border-radius:50px;
+            background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25)">
+            <i class="fas fa-certificate"></i> NISM Certified
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+            color:rgba(255,255,255,0.5);padding:4px 10px;border-radius:50px;
+            background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12)">
+            <i class="fas fa-shield-halved"></i> SEBI Compliant Education
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+            color:rgba(255,255,255,0.5);padding:4px 10px;border-radius:50px;
+            background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12)">
+            <i class="fas fa-map-marker-alt"></i> West Bengal, India
+          </span>
+        </div>
+      </div>
+
     </div>
   </div>
 

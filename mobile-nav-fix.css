@@ -430,3 +430,37 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center !important;
   }
 }
+
+/* ── Notes pill: desktop styling via class (no inline style) ── */
+.nav-notes-pill {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 13px;
+  border-radius: 50px;
+  background: rgba(5,150,105,0.09);
+  border: 1.5px solid rgba(5,150,105,0.25);
+  color: #059669 !important;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 1 !important;
+}
+.nav-notes-pill:hover {
+  background: rgba(5,150,105,0.18);
+}
+
+/* ── Notes pill in mobile slide-out menu ── */
+@media (max-width: 768px) {
+  .nav-notes-pill {
+    display: flex !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #059669 !important;
+  }
+}
